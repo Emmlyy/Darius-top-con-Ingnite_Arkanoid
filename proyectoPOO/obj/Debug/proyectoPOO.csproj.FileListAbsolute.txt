@@ -1,0 +1,7 @@
+C:\Users\Emely Paola\Documents\UCA\2020\POO\ProyectoPOO\Emmlyy-Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\proyectoPOO.exe.config
+C:\Users\Emely Paola\Documents\UCA\2020\POO\ProyectoPOO\Emmlyy-Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\proyectoPOO.exe
+C:\Users\Emely Paola\Documents\UCA\2020\POO\ProyectoPOO\Emmlyy-Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\proyectoPOO.pdb
+C:\Users\Emely Paola\Documents\UCA\2020\POO\ProyectoPOO\Emmlyy-Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csprojAssemblyReference.cache
+C:\Users\Emely Paola\Documents\UCA\2020\POO\ProyectoPOO\Emmlyy-Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csproj.CoreCompileInputs.cache
+C:\Users\Emely Paola\Documents\UCA\2020\POO\ProyectoPOO\Emmlyy-Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.exe
+C:\Users\Emely Paola\Documents\UCA\2020\POO\ProyectoPOO\Emmlyy-Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.pdb
