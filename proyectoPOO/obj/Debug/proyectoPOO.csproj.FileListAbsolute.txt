@@ -5,3 +5,14 @@ C:\Users\Emely Paola\Documents\UCA\2020\POO\ProyectoPOO\Emmlyy-Darius-top-con-In
 C:\Users\Emely Paola\Documents\UCA\2020\POO\ProyectoPOO\Emmlyy-Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csproj.CoreCompileInputs.cache
 C:\Users\Emely Paola\Documents\UCA\2020\POO\ProyectoPOO\Emmlyy-Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.exe
 C:\Users\Emely Paola\Documents\UCA\2020\POO\ProyectoPOO\Emmlyy-Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.pdb
+C:\Users\MORIS\Desktop\otro\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\proyectoPOO.exe.config
+C:\Users\MORIS\Desktop\otro\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\proyectoPOO.exe
+C:\Users\MORIS\Desktop\otro\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\proyectoPOO.pdb
+C:\Users\MORIS\Desktop\otro\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csprojResolveAssemblyReference.cache
+C:\Users\MORIS\Desktop\otro\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Form1.resources
+C:\Users\MORIS\Desktop\otro\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Jugar.resources
+C:\Users\MORIS\Desktop\otro\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Properties.Resources.resources
+C:\Users\MORIS\Desktop\otro\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csproj.GenerateResource.Cache
+C:\Users\MORIS\Desktop\otro\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.exe
+C:\Users\MORIS\Desktop\otro\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.pdb
+C:\Users\MORIS\Desktop\otro\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Puntaje.resources
