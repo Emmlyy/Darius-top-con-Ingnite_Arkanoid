@@ -18,17 +18,20 @@ namespace proyectoPOO
         public Form1()
         {
             InitializeComponent();
+            jg.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            jg.Dock = DockStyle.Fill;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            button1.Hide();
-            button2.Hide();
-            button3.Hide();
-            pictureBox1.Hide();
-            tableLayoutPanel1.Controls.Add(jg,2,4);
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            tableLayoutPanel1.Controls.Remove(change);
+            tableLayoutPanel1.Controls.Add(jg, 0, 0);
             change = jg;
             tableLayoutPanel1.SetRowSpan(change,6);
+            tableLayoutPanel1.SetColumnSpan(change, 3);   
         }
 
         private void button2_Click(object sender, EventArgs e)
