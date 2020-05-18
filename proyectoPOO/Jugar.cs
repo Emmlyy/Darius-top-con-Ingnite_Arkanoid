@@ -13,7 +13,8 @@ namespace proyectoPOO
 
         private void button1_Click(object sender, EventArgs e)
         {
-             palabra = textBox1;
+            palabra = textBox1;
+             Connection.Query(palabra.Text);
         }
     }
 }
