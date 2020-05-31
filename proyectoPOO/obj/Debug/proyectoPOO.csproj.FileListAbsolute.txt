@@ -95,3 +95,46 @@ C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\p
 C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csproj.CopyComplete
 C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.exe
 C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.pdb
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\proyectoPOO.exe.config
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\proyectoPOO.exe
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\proyectoPOO.pdb
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.dll
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\Npgsql.dll
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Buffers.dll
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Memory.dll
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Text.Json.dll
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.ValueTuple.dll
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.pdb
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.xml
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\Npgsql.pdb
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\Npgsql.xml
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Buffers.xml
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Memory.xml
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Text.Json.xml
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.ValueTuple.xml
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csprojAssemblyReference.cache
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.exe.config
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Form1.resources
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Properties.Resources.resources
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Jugar.resources
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Puntaje.resources
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csproj.GenerateResource.cache
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csproj.CopyComplete
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.exe
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.pdb
