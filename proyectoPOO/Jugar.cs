@@ -1,20 +1,21 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace proyectoPOO
 { 
     public partial class Jugar : UserControl
-    {    private TextBox palabra = new TextBox();
+    {    
         public Jugar()
         {
             InitializeComponent();
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPlay_Click(object sender, EventArgs e)
         {
-            palabra = textBox1;
-             Connection.Query(palabra.Text);
+            string sql = "SELECT \"UserID\",\"Points\" FROM public.\"User\" WHERE \"UserID\"='"+txtUsuario.Text+"';";
+            Connection.Query(txtUsuario.Text);
         }
     }
 }

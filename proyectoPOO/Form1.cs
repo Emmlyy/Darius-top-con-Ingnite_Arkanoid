@@ -22,11 +22,11 @@ namespace proyectoPOO
             jg.Dock = DockStyle.Fill;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bntPlayy_Click(object sender, EventArgs e)
         {
-            button1.Visible = false;
-            button2.Visible = false;
-            button3.Visible = false;
+            btnPlayy.Visible = false;
+            btnPoint.Visible = false;
+            btnClosed.Visible = false;
             tableLayoutPanel1.Controls.Remove(change);
             tableLayoutPanel1.Controls.Add(jg, 0, 0);
             change = jg;
@@ -34,14 +34,19 @@ namespace proyectoPOO
             tableLayoutPanel1.SetColumnSpan(change, 3);   
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void bntPoint_Click(object sender, EventArgs e)
         {
-            
-            
-            throw new System.NotImplementedException();
+            btnPlayy.Visible = false;
+            btnPoint.Visible = false;
+            btnClosed.Visible = false;
+            tableLayoutPanel1.Controls.Remove(change);
+            tableLayoutPanel1.Controls.Add(pun, 0, 0);
+            change = pun;
+            tableLayoutPanel1.SetRowSpan(change,6);
+            tableLayoutPanel1.SetColumnSpan(change, 3);  
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void bntClosed_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro(a) que desea salir del sistema?",
                 "Consulta",

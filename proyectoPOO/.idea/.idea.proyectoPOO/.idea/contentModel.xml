@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\MORIS\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\MORIS\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_proyectoPOO.617156510.00" t="ExcludeRecursive" />
-    <e p="C:\Users\MORIS\Desktop\ProyectoPOO\Darius-top-con-Ingnite_Arkanoid\ProyectoPOO" t="IncludeRecursive">
+    <e p="C:\Users\Laboratorio\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Laboratorio\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_proyectoPOO.-1704507343.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\ProyectoPOO" t="IncludeRecursive">
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
+      <e p="Connection.cs" t="Include" />
       <e p="Form1.cs" t="Include" />
       <e p="Form1.Designer.cs" t="Include" />
       <e p="Form1.resx" t="Include" />
@@ -14,6 +15,7 @@
       <e p="Jugar.resx" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="packages.config" t="Include" />
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
         <e p="AssemblyInfo.cs" t="Include" />
@@ -27,6 +29,7 @@
       <e p="Puntaje.cs" t="Include" />
       <e p="Puntaje.Designer.cs" t="Include" />
       <e p="Puntaje.resx" t="Include" />
+      <e p="User.cs" t="Include" />
     </e>
   </component>
 </project>

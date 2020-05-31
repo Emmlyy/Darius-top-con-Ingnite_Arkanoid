@@ -61,3 +61,37 @@ C:\Users\CORE i5\Desktop\Nueva carpeta\Final\Darius-top-con-Ingnite_Arkanoid\pro
 C:\Users\CORE i5\Desktop\Nueva carpeta\Final\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csproj.CopyComplete
 C:\Users\CORE i5\Desktop\Nueva carpeta\Final\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.exe
 C:\Users\CORE i5\Desktop\Nueva carpeta\Final\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.pdb
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\proyectoPOO.exe.config
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\proyectoPOO.exe
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\proyectoPOO.pdb
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\Npgsql.dll
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Buffers.dll
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Memory.dll
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Text.Json.dll
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.ValueTuple.dll
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\Npgsql.pdb
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\Npgsql.xml
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Buffers.xml
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Memory.xml
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Text.Json.xml
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.ValueTuple.xml
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csprojAssemblyReference.cache
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.exe.config
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Form1.resources
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Jugar.resources
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Properties.Resources.resources
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Puntaje.resources
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csproj.GenerateResource.cache
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csproj.CopyComplete
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.exe
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.pdb
