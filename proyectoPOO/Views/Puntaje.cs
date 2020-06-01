@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 using LiveCharts;
 using LiveCharts.WinForms;
@@ -23,48 +24,59 @@ namespace proyectoPOO
 
         private void Puntaje_Load(object sender, EventArgs e)
         {
-            grafico.Top = 10;
-            grafico.Left = 10;
-            grafico.Width = grafico.Parent.Width - 20;
-            grafico.Height = grafico.Parent.Height - 20;
-            
-            List<User> u =new List<User>();
-            u = Obtener();
-            grafico.Series = new SeriesCollection
-            {new RowSeries()
+            try
+            {
+                grafico.Top = 10;
+                grafico.Left = 10;
+                grafico.Width = grafico.Parent.Width - 20;
+                grafico.Height = grafico.Parent.Height - 20;
+
+                List<User> u = new List<User>();
+                u = Obtener();
+                grafico.Series = new SeriesCollection
                 {
-                    Title = "Points",
-                    Values = new ChartValues<int> {}
+                    new RowSeries()
+                    {
+                        Title = "Points",
+                        Values = new ChartValues<int> { }
+                    }
+                };
+
+                grafico.AxisY.Add(new Axis
+                {
+                    Labels = new List<string>()
+                });
+
+                //poblar
+                foreach (var x in u)
+                {
+                    grafico.Series[0].Values.Add(x.point);
+                    grafico.AxisY[0].Labels.Add(x.name);
                 }
-            };
-            
-            grafico.AxisY.Add(new Axis
-            {
-                Labels = new List<string>()
-            });
-            
-            //poblar
-            foreach (var x in u)
-            {
-                grafico.Series[0].Values.Add(x.point);
-                grafico.AxisY[0].Labels.Add(x.name);
             }
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en grafica");
+            }
         }
 
         private List<User> Obtener()
         {
-            string sql = "SELECT name, points FROM user" +
-                         "ORDER BY points DESC FETCH FIRST" +
-                         "10 ROWS ONLY";
-            List<User> list = new List<User>();
-            /*DataTable dt= Connection.Query(sql);
+            string sql = "SELECT * FROM User" +
+                         "ORDER BY Points DESC FETCH FIRST 10 ROWS ONLY";
             
-            foreach (var fila in dt.Row)
+            List<User> list = new List<User>();
+            DataTable dt= Connection.Query(sql);
+            
+            
+            foreach (DataRow fila in dt.Rows)
             {
-                list.name=fila[0].ToString();
-                list.point=Convert.ToInt32(fila[1].ToString());
-            }*/
+                User u= new User();
+                u.name = fila[0].ToString(); 
+                u.point=Convert.ToInt32(fila[1].ToString());
+                
+                list.Add(u);
+            }
             return list;
         }
     }

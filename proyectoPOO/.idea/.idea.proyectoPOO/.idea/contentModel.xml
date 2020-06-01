@@ -6,13 +6,15 @@
     <e p="C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\ProyectoPOO" t="IncludeRecursive">
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
-      <e p="Connection.cs" t="Include" />
+      <e p="Controllers" t="Include">
+        <e p="Connection.cs" t="Include" />
+      </e>
       <e p="Form1.cs" t="Include" />
       <e p="Form1.Designer.cs" t="Include" />
       <e p="Form1.resx" t="Include" />
-      <e p="Jugar.cs" t="Include" />
-      <e p="Jugar.Designer.cs" t="Include" />
-      <e p="Jugar.resx" t="Include" />
+      <e p="Models" t="Include">
+        <e p="User.cs" t="Include" />
+      </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="packages.config" t="Include" />
@@ -26,10 +28,14 @@
       </e>
       <e p="proyectoPOO.csproj" t="IncludeRecursive" />
       <e p="proyectoPOO.sln" t="IncludeFlat" />
-      <e p="Puntaje.cs" t="Include" />
-      <e p="Puntaje.Designer.cs" t="Include" />
-      <e p="Puntaje.resx" t="Include" />
-      <e p="User.cs" t="Include" />
+      <e p="Views" t="Include">
+        <e p="Jugar.cs" t="Include" />
+        <e p="Jugar.Designer.cs" t="Include" />
+        <e p="Jugar.resx" t="Include" />
+        <e p="Puntaje.cs" t="Include" />
+        <e p="Puntaje.Designer.cs" t="Include" />
+        <e p="Puntaje.resx" t="Include" />
+      </e>
     </e>
   </component>
 </project>

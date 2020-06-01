@@ -138,3 +138,12 @@ C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoP
 C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csproj.CopyComplete
 C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.exe
 C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.pdb
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.dll
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.pdb
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.xml
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.Wpf.xml
