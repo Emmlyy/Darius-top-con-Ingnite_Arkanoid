@@ -27,6 +27,11 @@ namespace proyectoPOO
                     string name = user.Rows[0][0].ToString();
                     string points = user.Rows[0][1].ToString();
                     MessageBox.Show("Bienvenido: " +name +"\nTus puntos actuales son: "+points);
+                    Form temp = this.FindForm();
+                    temp.Hide();
+                    //temp.Dispose();
+                    Game game = new Game();
+                    game.ShowDialog();
                 }
                 catch (Exception)
                 {

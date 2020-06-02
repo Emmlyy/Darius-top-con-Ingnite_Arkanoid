@@ -74,7 +74,6 @@ namespace proyectoPOO
                 User u= new User();
                 u.name = fila[0].ToString(); 
                 u.point=Convert.ToInt32(fila[1].ToString());
-                
                 list.Add(u);
             }
             return list;

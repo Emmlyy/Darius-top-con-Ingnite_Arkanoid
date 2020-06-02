@@ -147,3 +147,4 @@ C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\p
 C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.WinForms.xml
 C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Game.resources
