@@ -39,9 +39,11 @@ namespace proyectoPOO
             btnPlayy.Visible = false;
             btnPoint.Visible = false;
             btnClosed.Visible = false;
+            pictureBox1.Hide();
             tableLayoutPanel1.Controls.Remove(change);
-            tableLayoutPanel1.Controls.Add(pun, 0, 0);
-            change = pun;
+            change = new Puntaje();
+            change.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Controls.Add(change, 0, 0);
             tableLayoutPanel1.SetRowSpan(change,6);
             tableLayoutPanel1.SetColumnSpan(change, 3);  
         }

@@ -32,6 +32,8 @@ namespace proyectoPOO
         private void InitializeComponent()
         {
             this.Contenedor = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Contenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // Contenedor
@@ -45,6 +47,7 @@ namespace proyectoPOO
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.Contenedor.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.Contenedor.Controls.Add(this.label1, 0, 0);
             this.Contenedor.Location = new System.Drawing.Point(3, 3);
             this.Contenedor.Name = "Contenedor";
             this.Contenedor.RowCount = 1;
@@ -72,7 +75,15 @@ namespace proyectoPOO
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 415F));
             this.Contenedor.Size = new System.Drawing.Size(534, 412);
             this.Contenedor.TabIndex = 0;
-           
+            this.Contenedor.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
             // 
             // Puntaje
             // 
@@ -82,11 +93,13 @@ namespace proyectoPOO
             this.Name = "Puntaje";
             this.Size = new System.Drawing.Size(537, 415);
             this.Load += new System.EventHandler(this.Puntaje_Load);
+            this.Contenedor.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel Contenedor;
+        private System.Windows.Forms.Label label1;
     }
 }
