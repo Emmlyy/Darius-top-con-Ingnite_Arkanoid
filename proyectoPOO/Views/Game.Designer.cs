@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace proyectoPOO
 {
@@ -32,7 +33,8 @@ namespace proyectoPOO
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
+            System.ComponentModel.ComponentResourceManager resources =
+                new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.pictureBoxBall = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBoxTileblack = new System.Windows.Forms.PictureBox();
@@ -59,6 +61,11 @@ namespace proyectoPOO
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.life1 = new System.Windows.Forms.PictureBox();
+            this.life2 = new System.Windows.Forms.PictureBox();
+            this.life3 = new System.Windows.Forms.PictureBox();
+            this.floor = new System.Windows.Forms.PictureBox();
+            this.Player = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxTileblack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxTileblindbroke)).BeginInit();
@@ -84,14 +91,19 @@ namespace proyectoPOO
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.life1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.life2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.life3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.floor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.Player)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxBall
             // 
             this.pictureBoxBall.Image = ((System.Drawing.Image) (resources.GetObject("pictureBoxBall.Image")));
-            this.pictureBoxBall.Location = new System.Drawing.Point(428, 333);
+            this.pictureBoxBall.Location = new System.Drawing.Point(499, 384);
             this.pictureBoxBall.Name = "pictureBoxBall";
-            this.pictureBoxBall.Size = new System.Drawing.Size(37, 38);
+            this.pictureBoxBall.Size = new System.Drawing.Size(43, 44);
             this.pictureBoxBall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxBall.TabIndex = 0;
             this.pictureBoxBall.TabStop = false;
@@ -105,11 +117,12 @@ namespace proyectoPOO
             // pictureBoxTileblack
             // 
             this.pictureBoxTileblack.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxTileblack.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxTileblack.BackgroundImage")));
+            this.pictureBoxTileblack.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBoxTileblack.BackgroundImage")));
             this.pictureBoxTileblack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxTileblack.Location = new System.Drawing.Point(428, 137);
+            this.pictureBoxTileblack.Location = new System.Drawing.Point(499, 158);
             this.pictureBoxTileblack.Name = "pictureBoxTileblack";
-            this.pictureBoxTileblack.Size = new System.Drawing.Size(203, 53);
+            this.pictureBoxTileblack.Size = new System.Drawing.Size(237, 61);
             this.pictureBoxTileblack.TabIndex = 1;
             this.pictureBoxTileblack.TabStop = false;
             this.pictureBoxTileblack.Tag = "block";
@@ -117,11 +130,12 @@ namespace proyectoPOO
             // pictureBoxTileblindbroke
             // 
             this.pictureBoxTileblindbroke.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxTileblindbroke.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxTileblindbroke.BackgroundImage")));
+            this.pictureBoxTileblindbroke.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBoxTileblindbroke.BackgroundImage")));
             this.pictureBoxTileblindbroke.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxTileblindbroke.Location = new System.Drawing.Point(850, 255);
+            this.pictureBoxTileblindbroke.Location = new System.Drawing.Point(992, 294);
             this.pictureBoxTileblindbroke.Name = "pictureBoxTileblindbroke";
-            this.pictureBoxTileblindbroke.Size = new System.Drawing.Size(203, 53);
+            this.pictureBoxTileblindbroke.Size = new System.Drawing.Size(237, 61);
             this.pictureBoxTileblindbroke.TabIndex = 2;
             this.pictureBoxTileblindbroke.TabStop = false;
             this.pictureBoxTileblindbroke.Tag = "blockard2";
@@ -129,11 +143,12 @@ namespace proyectoPOO
             // pictureBoxTilegreen
             // 
             this.pictureBoxTilegreen.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxTilegreen.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxTilegreen.BackgroundImage")));
+            this.pictureBoxTilegreen.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBoxTilegreen.BackgroundImage")));
             this.pictureBoxTilegreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxTilegreen.Location = new System.Drawing.Point(428, 255);
+            this.pictureBoxTilegreen.Location = new System.Drawing.Point(499, 294);
             this.pictureBoxTilegreen.Name = "pictureBoxTilegreen";
-            this.pictureBoxTilegreen.Size = new System.Drawing.Size(203, 53);
+            this.pictureBoxTilegreen.Size = new System.Drawing.Size(237, 61);
             this.pictureBoxTilegreen.TabIndex = 3;
             this.pictureBoxTilegreen.TabStop = false;
             this.pictureBoxTilegreen.Tag = "block";
@@ -141,11 +156,12 @@ namespace proyectoPOO
             // pictureBoxTileviolet
             // 
             this.pictureBoxTileviolet.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxTileviolet.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxTileviolet.BackgroundImage")));
+            this.pictureBoxTileviolet.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBoxTileviolet.BackgroundImage")));
             this.pictureBoxTileviolet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxTileviolet.Location = new System.Drawing.Point(637, 196);
+            this.pictureBoxTileviolet.Location = new System.Drawing.Point(743, 226);
             this.pictureBoxTileviolet.Name = "pictureBoxTileviolet";
-            this.pictureBoxTileviolet.Size = new System.Drawing.Size(203, 53);
+            this.pictureBoxTileviolet.Size = new System.Drawing.Size(237, 61);
             this.pictureBoxTileviolet.TabIndex = 4;
             this.pictureBoxTileviolet.TabStop = false;
             this.pictureBoxTileviolet.Tag = "block";
@@ -153,11 +169,12 @@ namespace proyectoPOO
             // pictureBoTileblue
             // 
             this.pictureBoTileblue.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoTileblue.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoTileblue.BackgroundImage")));
+            this.pictureBoTileblue.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBoTileblue.BackgroundImage")));
             this.pictureBoTileblue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoTileblue.Location = new System.Drawing.Point(428, 78);
+            this.pictureBoTileblue.Location = new System.Drawing.Point(499, 90);
             this.pictureBoTileblue.Name = "pictureBoTileblue";
-            this.pictureBoTileblue.Size = new System.Drawing.Size(203, 53);
+            this.pictureBoTileblue.Size = new System.Drawing.Size(237, 61);
             this.pictureBoTileblue.TabIndex = 5;
             this.pictureBoTileblue.TabStop = false;
             this.pictureBoTileblue.Tag = "block";
@@ -165,11 +182,12 @@ namespace proyectoPOO
             // pictureBoxTilered
             // 
             this.pictureBoxTilered.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxTilered.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxTilered.BackgroundImage")));
+            this.pictureBoxTilered.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBoxTilered.BackgroundImage")));
             this.pictureBoxTilered.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxTilered.Location = new System.Drawing.Point(219, 78);
+            this.pictureBoxTilered.Location = new System.Drawing.Point(255, 90);
             this.pictureBoxTilered.Name = "pictureBoxTilered";
-            this.pictureBoxTilered.Size = new System.Drawing.Size(203, 53);
+            this.pictureBoxTilered.Size = new System.Drawing.Size(237, 61);
             this.pictureBoxTilered.TabIndex = 6;
             this.pictureBoxTilered.TabStop = false;
             this.pictureBoxTilered.Tag = "block";
@@ -177,11 +195,12 @@ namespace proyectoPOO
             // pictureBoxTileBlind
             // 
             this.pictureBoxTileBlind.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxTileBlind.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxTileBlind.BackgroundImage")));
+            this.pictureBoxTileBlind.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBoxTileBlind.BackgroundImage")));
             this.pictureBoxTileBlind.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxTileBlind.Location = new System.Drawing.Point(219, 196);
+            this.pictureBoxTileBlind.Location = new System.Drawing.Point(255, 226);
             this.pictureBoxTileBlind.Name = "pictureBoxTileBlind";
-            this.pictureBoxTileBlind.Size = new System.Drawing.Size(203, 53);
+            this.pictureBoxTileBlind.Size = new System.Drawing.Size(237, 61);
             this.pictureBoxTileBlind.TabIndex = 7;
             this.pictureBoxTileBlind.TabStop = false;
             this.pictureBoxTileBlind.Tag = "blockard1";
@@ -189,11 +208,12 @@ namespace proyectoPOO
             // pictureBoxpink
             // 
             this.pictureBoxpink.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxpink.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxpink.BackgroundImage")));
+            this.pictureBoxpink.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBoxpink.BackgroundImage")));
             this.pictureBoxpink.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxpink.Location = new System.Drawing.Point(1059, 137);
+            this.pictureBoxpink.Location = new System.Drawing.Point(1235, 158);
             this.pictureBoxpink.Name = "pictureBoxpink";
-            this.pictureBoxpink.Size = new System.Drawing.Size(203, 53);
+            this.pictureBoxpink.Size = new System.Drawing.Size(237, 61);
             this.pictureBoxpink.TabIndex = 8;
             this.pictureBoxpink.TabStop = false;
             this.pictureBoxpink.Tag = "block";
@@ -201,11 +221,12 @@ namespace proyectoPOO
             // pictureBoxTilebluelight
             // 
             this.pictureBoxTilebluelight.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxTilebluelight.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxTilebluelight.BackgroundImage")));
+            this.pictureBoxTilebluelight.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBoxTilebluelight.BackgroundImage")));
             this.pictureBoxTilebluelight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxTilebluelight.Location = new System.Drawing.Point(641, 137);
+            this.pictureBoxTilebluelight.Location = new System.Drawing.Point(748, 158);
             this.pictureBoxTilebluelight.Name = "pictureBoxTilebluelight";
-            this.pictureBoxTilebluelight.Size = new System.Drawing.Size(203, 53);
+            this.pictureBoxTilebluelight.Size = new System.Drawing.Size(237, 61);
             this.pictureBoxTilebluelight.TabIndex = 9;
             this.pictureBoxTilebluelight.TabStop = false;
             this.pictureBoxTilebluelight.Tag = "block";
@@ -213,11 +234,12 @@ namespace proyectoPOO
             // pictureBoxlightblue
             // 
             this.pictureBoxlightblue.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxlightblue.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxlightblue.BackgroundImage")));
+            this.pictureBoxlightblue.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBoxlightblue.BackgroundImage")));
             this.pictureBoxlightblue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxlightblue.Location = new System.Drawing.Point(641, 78);
+            this.pictureBoxlightblue.Location = new System.Drawing.Point(748, 90);
             this.pictureBoxlightblue.Name = "pictureBoxlightblue";
-            this.pictureBoxlightblue.Size = new System.Drawing.Size(203, 53);
+            this.pictureBoxlightblue.Size = new System.Drawing.Size(237, 61);
             this.pictureBoxlightblue.TabIndex = 10;
             this.pictureBoxlightblue.TabStop = false;
             this.pictureBoxlightblue.Tag = "block";
@@ -225,11 +247,12 @@ namespace proyectoPOO
             // pictureBoxlightyellow
             // 
             this.pictureBoxlightyellow.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxlightyellow.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxlightyellow.BackgroundImage")));
+            this.pictureBoxlightyellow.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBoxlightyellow.BackgroundImage")));
             this.pictureBoxlightyellow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxlightyellow.Location = new System.Drawing.Point(850, 196);
+            this.pictureBoxlightyellow.Location = new System.Drawing.Point(992, 226);
             this.pictureBoxlightyellow.Name = "pictureBoxlightyellow";
-            this.pictureBoxlightyellow.Size = new System.Drawing.Size(203, 53);
+            this.pictureBoxlightyellow.Size = new System.Drawing.Size(237, 61);
             this.pictureBoxlightyellow.TabIndex = 11;
             this.pictureBoxlightyellow.TabStop = false;
             this.pictureBoxlightyellow.Tag = "block";
@@ -237,11 +260,12 @@ namespace proyectoPOO
             // pictureBoxTileyellow
             // 
             this.pictureBoxTileyellow.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxTileyellow.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxTileyellow.BackgroundImage")));
+            this.pictureBoxTileyellow.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBoxTileyellow.BackgroundImage")));
             this.pictureBoxTileyellow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxTileyellow.Location = new System.Drawing.Point(428, 196);
+            this.pictureBoxTileyellow.Location = new System.Drawing.Point(499, 226);
             this.pictureBoxTileyellow.Name = "pictureBoxTileyellow";
-            this.pictureBoxTileyellow.Size = new System.Drawing.Size(203, 53);
+            this.pictureBoxTileyellow.Size = new System.Drawing.Size(237, 61);
             this.pictureBoxTileyellow.TabIndex = 12;
             this.pictureBoxTileyellow.TabStop = false;
             this.pictureBoxTileyellow.Tag = "blockmore";
@@ -249,11 +273,12 @@ namespace proyectoPOO
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(641, 255);
+            this.pictureBox1.Location = new System.Drawing.Point(748, 294);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(203, 53);
+            this.pictureBox1.Size = new System.Drawing.Size(237, 61);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "block";
@@ -261,11 +286,12 @@ namespace proyectoPOO
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(219, 255);
+            this.pictureBox2.Location = new System.Drawing.Point(255, 294);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(203, 53);
+            this.pictureBox2.Size = new System.Drawing.Size(237, 61);
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Tag = "block";
@@ -273,11 +299,12 @@ namespace proyectoPOO
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(219, 137);
+            this.pictureBox3.Location = new System.Drawing.Point(255, 158);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(203, 53);
+            this.pictureBox3.Size = new System.Drawing.Size(237, 61);
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Tag = "block";
@@ -285,11 +312,12 @@ namespace proyectoPOO
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(850, 137);
+            this.pictureBox4.Location = new System.Drawing.Point(992, 158);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(203, 53);
+            this.pictureBox4.Size = new System.Drawing.Size(237, 61);
             this.pictureBox4.TabIndex = 16;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Tag = "block";
@@ -297,11 +325,12 @@ namespace proyectoPOO
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(850, 78);
+            this.pictureBox5.Location = new System.Drawing.Point(992, 90);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(203, 53);
+            this.pictureBox5.Size = new System.Drawing.Size(237, 61);
             this.pictureBox5.TabIndex = 17;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Tag = "block";
@@ -309,11 +338,12 @@ namespace proyectoPOO
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBox6.BackgroundImage")));
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(1270, 78);
+            this.pictureBox6.Location = new System.Drawing.Point(1482, 90);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(203, 53);
+            this.pictureBox6.Size = new System.Drawing.Size(237, 61);
             this.pictureBox6.TabIndex = 18;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Tag = "block";
@@ -321,11 +351,12 @@ namespace proyectoPOO
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox7.BackgroundImage")));
+            this.pictureBox7.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBox7.BackgroundImage")));
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(1059, 78);
+            this.pictureBox7.Location = new System.Drawing.Point(1235, 90);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(203, 53);
+            this.pictureBox7.Size = new System.Drawing.Size(237, 61);
             this.pictureBox7.TabIndex = 19;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Tag = "block";
@@ -333,11 +364,12 @@ namespace proyectoPOO
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox8.BackgroundImage")));
+            this.pictureBox8.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBox8.BackgroundImage")));
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(1059, 255);
+            this.pictureBox8.Location = new System.Drawing.Point(1235, 294);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(203, 53);
+            this.pictureBox8.Size = new System.Drawing.Size(237, 61);
             this.pictureBox8.TabIndex = 20;
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Tag = "block";
@@ -345,11 +377,12 @@ namespace proyectoPOO
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox9.BackgroundImage")));
+            this.pictureBox9.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBox9.BackgroundImage")));
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(1059, 196);
+            this.pictureBox9.Location = new System.Drawing.Point(1235, 226);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(203, 53);
+            this.pictureBox9.Size = new System.Drawing.Size(237, 61);
             this.pictureBox9.TabIndex = 21;
             this.pictureBox9.TabStop = false;
             this.pictureBox9.Tag = "blockmore";
@@ -357,11 +390,12 @@ namespace proyectoPOO
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox10.BackgroundImage")));
+            this.pictureBox10.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBox10.BackgroundImage")));
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(1268, 137);
+            this.pictureBox10.Location = new System.Drawing.Point(1479, 158);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(203, 53);
+            this.pictureBox10.Size = new System.Drawing.Size(237, 61);
             this.pictureBox10.TabIndex = 22;
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Tag = "block";
@@ -369,11 +403,12 @@ namespace proyectoPOO
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox11.BackgroundImage")));
+            this.pictureBox11.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBox11.BackgroundImage")));
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(1268, 196);
+            this.pictureBox11.Location = new System.Drawing.Point(1479, 226);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(203, 53);
+            this.pictureBox11.Size = new System.Drawing.Size(237, 61);
             this.pictureBox11.TabIndex = 23;
             this.pictureBox11.TabStop = false;
             this.pictureBox11.Tag = "block";
@@ -381,23 +416,82 @@ namespace proyectoPOO
             // pictureBox12
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox12.BackgroundImage")));
+            this.pictureBox12.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBox12.BackgroundImage")));
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox12.Location = new System.Drawing.Point(1268, 255);
+            this.pictureBox12.Location = new System.Drawing.Point(1479, 294);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(203, 53);
+            this.pictureBox12.Size = new System.Drawing.Size(237, 61);
             this.pictureBox12.TabIndex = 24;
             this.pictureBox12.TabStop = false;
             this.pictureBox12.Tag = "blockard3";
             // 
+            // life1
+            // 
+            this.life1.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("life1.BackgroundImage")));
+            this.life1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.life1.Location = new System.Drawing.Point(85, 12);
+            this.life1.Name = "life1";
+            this.life1.Size = new System.Drawing.Size(59, 57);
+            this.life1.TabIndex = 25;
+            this.life1.TabStop = false;
+            // 
+            // life2
+            // 
+            this.life2.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("life2.BackgroundImage")));
+            this.life2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.life2.Location = new System.Drawing.Point(150, 12);
+            this.life2.Name = "life2";
+            this.life2.Size = new System.Drawing.Size(59, 57);
+            this.life2.TabIndex = 26;
+            this.life2.TabStop = false;
+            // 
+            // life3
+            // 
+            this.life3.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("life3.BackgroundImage")));
+            this.life3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.life3.Location = new System.Drawing.Point(215, 12);
+            this.life3.Name = "life3";
+            this.life3.Size = new System.Drawing.Size(59, 57);
+            this.life3.TabIndex = 27;
+            this.life3.TabStop = false;
+            // 
+            // floor
+            // 
+            this.floor.BackColor = System.Drawing.Color.DimGray;
+            this.floor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.floor.Location = new System.Drawing.Point(-4, 739);
+            this.floor.Name = "floor";
+            this.floor.Size = new System.Drawing.Size(1426, 61);
+            this.floor.TabIndex = 28;
+            this.floor.TabStop = false;
+            this.floor.Tag = "floor";
+            // 
+            // Player
+            // 
+            this.Player.BackColor = System.Drawing.Color.Transparent;
+            this.Player.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("Player.BackgroundImage")));
+            this.Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Player.Location = new System.Drawing.Point(398, 663);
+            this.Player.Name = "Player";
+            this.Player.Size = new System.Drawing.Size(460, 45);
+            this.Player.TabIndex = 29;
+            this.Player.TabStop = false;
+            this.Player.Tag = "player";
+            // 
             // Game
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1485, 699);
+            this.ClientSize = new System.Drawing.Size(1259, 749);
+            this.Controls.Add(this.Player);
+            this.Controls.Add(this.floor);
+            this.Controls.Add(this.life3);
+            this.Controls.Add(this.life2);
+            this.Controls.Add(this.life1);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox10);
@@ -428,6 +522,7 @@ namespace proyectoPOO
             this.Name = "Game";
             this.Text = "Game";
             this.Shown += new System.EventHandler(this.Game_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyPress);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxBall)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxTileblack)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxTileblindbroke)).EndInit();
@@ -453,6 +548,11 @@ namespace proyectoPOO
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.life1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.life2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.life3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.floor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.Player)).EndInit();
             this.ResumeLayout(false);
         }
 
@@ -484,5 +584,11 @@ namespace proyectoPOO
         private System.Windows.Forms.Timer timer1;
 
         #endregion
+
+        private System.Windows.Forms.PictureBox life3;
+        private System.Windows.Forms.PictureBox life2;
+        private System.Windows.Forms.PictureBox life1;
+        private System.Windows.Forms.PictureBox floor;
+        private System.Windows.Forms.PictureBox Player;
     }
 }

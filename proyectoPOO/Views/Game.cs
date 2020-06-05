@@ -8,6 +8,8 @@ namespace proyectoPOO
     {
         public int verticalBallMovement;
         public int horizontalBallMovement;
+        public int life = 3;
+        
 
         public Game()
         {
@@ -16,7 +18,7 @@ namespace proyectoPOO
             horizontalBallMovement = 1;
         }
 
-
+//este metodo es necesario? sino hay q borrarlo
         private void Game_Shown(object sender, EventArgs e)
         {
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -43,7 +45,88 @@ namespace proyectoPOO
                 horizontalBallMovement = -horizontalBallMovement;
             }
             
-            //detect collision with blocks
+            //detect collision with block
+                blocks();
+                Player_rebound();
+                Life();
+                
+        }
+
+
+        private void Game_KeyPress(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Left:
+                    Player.Left -= 10;
+                    break;
+                
+                case Keys.Right:
+                    Player.Left += 10;
+                    break;
+            }
+        }
+
+        private void Player_rebound()
+        {
+            
+            foreach (PictureBox x in this.Controls)
+            {
+                if (x.Tag == "player")
+                {
+                    if (pictureBoxBall.Bounds.IntersectsWith(x.Bounds))
+                    {   
+                        //AAAAAAAH maldita shit 
+                    }
+                }
+            }
+        }
+
+        private void Life()
+        {
+            
+            foreach (PictureBox x in this.Controls)
+            {
+                if (x.Tag=="floor")
+                {
+                    if (pictureBoxBall.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        life -= 1;
+                        Controls.Remove(pictureBoxBall);
+                        MessageBox.Show("-1 vida");
+                        //reiniciar la ubicacion de la PELOTA
+                    }
+                }
+            }
+
+            switch (life)
+            {
+                case 0:
+                    life1.Visible = false;
+                    life2.Visible = false;
+                    life3.Visible = false;
+                    MessageBox.Show("GAME OVER");
+                    break;
+                case 1:
+                    life1.Visible = true;
+                    life2.Visible = false;
+                    life3.Visible = false;
+                    break;
+                case 2:
+                    life1.Visible = true;
+                    life2.Visible = true;
+                    life3.Visible = false;
+                    break;
+                case 3: 
+                    life1.Visible = true;
+                    life2.Visible = true;
+                    life3.Visible = true;
+                    break;
+            }
+        }
+
+        private void blocks()
+        {
             foreach (PictureBox x in this.Controls)
             {int broke3 = 0;
                 int broke = 0;
@@ -125,23 +208,12 @@ namespace proyectoPOO
                                             }
                                         }
                                     }
-
-
                                 }
                             }
                         }
                     }
                 }
-
-
-
-
-
-
-
-
-
-            }
         }
+    }
     
 }
