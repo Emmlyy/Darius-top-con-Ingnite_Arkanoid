@@ -31,10 +31,12 @@ namespace proyectoPOO
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources =
                 new System.ComponentModel.ComponentResourceManager(typeof(Game_));
             this.pictureBoxBall = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
+            this.timerForMovements = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.Player)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +60,12 @@ namespace proyectoPOO
             this.Player.TabIndex = 1;
             this.Player.TabStop = false;
             // 
+            // timerForMovements
+            // 
+            this.timerForMovements.Enabled = true;
+            this.timerForMovements.Interval = 10;
+            this.timerForMovements.Tick += new System.EventHandler(this.timerForMovements_Tick);
+            // 
             // Game_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -67,9 +75,11 @@ namespace proyectoPOO
             this.ClientSize = new System.Drawing.Size(933, 434);
             this.Controls.Add(this.Player);
             this.Controls.Add(this.pictureBoxBall);
+            this.DoubleBuffered = true;
             this.Name = "Game_";
             this.Text = "Game_";
             this.Load += new System.EventHandler(this.Game__Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game__KeyDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Game__MouseMove);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxBall)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.Player)).EndInit();
@@ -82,5 +92,6 @@ namespace proyectoPOO
         #endregion
 
         private System.Windows.Forms.PictureBox Player;
+        private System.Windows.Forms.Timer timerForMovements;
     }
 }
