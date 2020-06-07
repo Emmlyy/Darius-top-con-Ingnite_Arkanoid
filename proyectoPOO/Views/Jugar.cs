@@ -30,7 +30,7 @@ namespace proyectoPOO
                     Form temp = this.FindForm();
                     temp.Hide();
                     //temp.Dispose();
-                    Game game = new Game();
+                    Game_ game = new Game_();
                     game.ShowDialog();
                 }
                 catch (Exception)

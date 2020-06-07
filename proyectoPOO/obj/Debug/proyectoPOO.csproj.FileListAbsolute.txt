@@ -194,3 +194,4 @@ C:\Users\MORIS\Desktop\finalproyect2\Darius-top-con-Ingnite_Arkanoid\proyectoPOO
 C:\Users\MORIS\Desktop\finalproyect2\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.exe
 C:\Users\MORIS\Desktop\finalproyect2\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.pdb
 C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Game.resources
+C:\Users\MORIS\Desktop\finalproyect2\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Game_.resources
