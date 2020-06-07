@@ -17,12 +17,7 @@ namespace proyectoPOO
             verticalBallMovement = 1;
             horizontalBallMovement = 1;
         }
-
-//este metodo es necesario? sino hay q borrarlo
-        private void Game_Shown(object sender, EventArgs e)
-        {
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-        }
+        
 
         private void timer1_Tick(object sender, EventArgs e)
         {

@@ -31,29 +31,48 @@ namespace proyectoPOO
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(proyectoPOO.Game_));
+            System.ComponentModel.ComponentResourceManager resources =
+                new System.ComponentModel.ComponentResourceManager(typeof(Game_));
             this.pictureBoxBall = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Player = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxBall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.Player)).BeginInit();
             this.SuspendLayout();
-            this.pictureBoxBall.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxBall.BackgroundImage")));
+            // 
+            // pictureBoxBall
+            // 
+            this.pictureBoxBall.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBoxBall.BackgroundImage")));
             this.pictureBoxBall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxBall.Location = new System.Drawing.Point(278, 166);
+            this.pictureBoxBall.Location = new System.Drawing.Point(324, 192);
             this.pictureBoxBall.Name = "pictureBoxBall";
-            this.pictureBoxBall.Size = new System.Drawing.Size(42, 41);
+            this.pictureBoxBall.Size = new System.Drawing.Size(49, 47);
             this.pictureBoxBall.TabIndex = 0;
             this.pictureBoxBall.TabStop = false;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            // 
+            // Player
+            // 
+            this.Player.Location = new System.Drawing.Point(45, 321);
+            this.Player.Name = "Player";
+            this.Player.Size = new System.Drawing.Size(279, 39);
+            this.Player.TabIndex = 1;
+            this.Player.TabStop = false;
+            // 
+            // Game_
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 376);
+            this.ClientSize = new System.Drawing.Size(933, 434);
+            this.Controls.Add(this.Player);
             this.Controls.Add(this.pictureBoxBall);
             this.Name = "Game_";
             this.Text = "Game_";
             this.Load += new System.EventHandler(this.Game__Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Game__MouseMove);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxBall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.Player)).EndInit();
             this.ResumeLayout(false);
         }
 
@@ -61,5 +80,7 @@ namespace proyectoPOO
         private System.Windows.Forms.Timer timer1;
 
         #endregion
+
+        private System.Windows.Forms.PictureBox Player;
     }
 }

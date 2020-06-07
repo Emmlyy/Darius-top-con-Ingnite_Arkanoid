@@ -460,7 +460,7 @@ namespace proyectoPOO
             // 
             this.floor.BackColor = System.Drawing.Color.DimGray;
             this.floor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.floor.Location = new System.Drawing.Point(-4, 739);
+            this.floor.Location = new System.Drawing.Point(-3, 738);
             this.floor.Name = "floor";
             this.floor.Size = new System.Drawing.Size(1426, 61);
             this.floor.TabIndex = 28;
@@ -520,8 +520,6 @@ namespace proyectoPOO
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.Name = "Game";
-            this.Text = "Game";
-            this.Shown += new System.EventHandler(this.Game_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyPress);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxBall)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxTileblack)).EndInit();

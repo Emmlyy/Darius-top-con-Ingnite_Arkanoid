@@ -15,6 +15,9 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="packages.config" t="Include" />
+      <e p="picturebox" t="Include">
+        <e p="picturebox.cs" t="Include" />
+      </e>
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
         <e p="AssemblyInfo.cs" t="Include" />
@@ -29,6 +32,9 @@
         <e p="Form1.cs" t="Include" />
         <e p="Form1.Designer.cs" t="Include" />
         <e p="Form1.resx" t="Include" />
+        <e p="Game..cs" t="Include" />
+        <e p="Game..Designer.cs" t="Include" />
+        <e p="Game..resx" t="Include" />
         <e p="Game.cs" t="Include" />
         <e p="Game.Designer.cs" t="Include" />
         <e p="Game.resx" t="Include" />

@@ -18,6 +18,9 @@ namespace proyectoPOO
         public Form1()
         {
             InitializeComponent();
+            Height = ClientSize.Height;
+            Width = ClientSize.Width;
+            WindowState = FormWindowState.Maximized;
             jg.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             jg.Dock = DockStyle.Fill;
         }

@@ -23,6 +23,19 @@ namespace proyectoPOO
         private void Game__Load(object sender, EventArgs e)
         {
             loadTiles();
+            loadPlayer();
+        }
+
+        private void loadPlayer()
+        {
+            
+            Player.BackgroundImage = Image.FromFile("../../Sprites/Player.png");
+            Player.BackgroundImageLayout = ImageLayout.Stretch;
+            Player.Top = (Height - Player.Height )- 80;
+            Player.Left = (Width / 2);
+            
+            pictureBoxBall.Top = (Height - pictureBoxBall.Height )- 200;
+            pictureBoxBall.Left = (Width / 2);
         }
         private void loadTiles()
         {
@@ -60,7 +73,6 @@ namespace proyectoPOO
             }
         }
 
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             pictureBoxBall.Top += verticalBallMovement;
@@ -88,5 +100,14 @@ namespace proyectoPOO
                            Life();*/
                            
                    }
+
+
+        private void Game__MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.X < (Width - Player.Width))
+            {
+                Player.Left = e.X;
+            }
         }
+    }
     }
