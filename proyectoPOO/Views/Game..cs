@@ -9,12 +9,15 @@ namespace proyectoPOO
     {
         public int verticalBallMovement;
         public int horizontalBallMovement;
-        public int life = 3;
+        public int life, points;
         private bool statusGame=false;
+        
         private picturebox.picturebox [,] cp;
         public Game_()
         {
             InitializeComponent();
+            life = 3;
+            points = 0;
             Height = ClientSize.Height;
             Width = ClientSize.Width;
             WindowState = FormWindowState.Maximized;
@@ -27,6 +30,7 @@ namespace proyectoPOO
         {
             loadTiles();
             loadPlayer();
+            Life();
         }
 
         private void loadPlayer()
@@ -84,6 +88,9 @@ namespace proyectoPOO
            {
                pictureBoxBall.Top = (Player.Top - pictureBoxBall.Height );
                statusGame = false;
+               life -= 1;
+               MessageBox.Show("-1 vida");
+               Life();
                //verticalBallMovement = -verticalBallMovement;
            }
            else if (pictureBoxBall.Top < 0)
@@ -104,7 +111,7 @@ namespace proyectoPOO
                verticalBallMovement = -verticalBallMovement;
            }
            //detect collision with block
-             /*  blocks();
+             /* blocks();
                Player_rebound();
                Life();*/
                
@@ -133,6 +140,8 @@ namespace proyectoPOO
             }
 
             movement();
+            lbPoints.Text = points.ToString();
+
         }
 
         private void Game__KeyDown(object sender, KeyEventArgs e)
@@ -140,6 +149,33 @@ namespace proyectoPOO
             if (e.KeyCode==Keys.Space)
             {
                 statusGame = true;
+            }
+        }
+        private void Life()
+        {
+            switch (life)
+            {
+                case 0:
+                    life1.Visible = false;
+                    life2.Visible = false;
+                    life3.Visible = false;
+                    MessageBox.Show("GAME OVER");
+                    break;
+                case 1:
+                    life1.Visible = true;
+                    life2.Visible = false;
+                    life3.Visible = false;
+                    break;
+                case 2:
+                    life1.Visible = true;
+                    life2.Visible = true;
+                    life3.Visible = false;
+                    break;
+                case 3: 
+                    life1.Visible = true;
+                    life2.Visible = true;
+                    life3.Visible = true;
+                    break;
             }
         }
     }
