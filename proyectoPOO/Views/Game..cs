@@ -2,36 +2,43 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using proyectoPOO.picturebox;
 
 namespace proyectoPOO
 {
     public partial class Game_ : Form
     {
+        public const int Xard = 10;
+        public const int Yard = 1;
         public int verticalBallMovement;
         public int horizontalBallMovement;
         public int life, points;
-        private bool statusGame=false;
-        
-        private picturebox.picturebox [,] cp;
+        private bool statusGame = false;
+        public const int Xtile = 10;
+        public const int Ytile = 5;
+        private picturebox.picturebox[,] cp;
+      /*  private picturebox.PictureBlock[,] Blocks;*/
         public Game_()
-        {
+        { 
             InitializeComponent();
             life = 3;
             points = 0;
             Height = ClientSize.Height;
             Width = ClientSize.Width;
             WindowState = FormWindowState.Maximized;
-            verticalBallMovement = 10;
             statusGame = false;
             horizontalBallMovement = 10;
-
+            verticalBallMovement = -horizontalBallMovement;
         }
-        private void Game__Load(object sender, EventArgs e)
+private void Game__Load(object sender, EventArgs e)
         {
             loadTiles();
             loadPlayer();
             Life();
+         
         }
+     
+        
 
         private void loadPlayer()
         {
@@ -45,13 +52,15 @@ namespace proyectoPOO
             pictureBoxBall.Left = (Width / 2);
 
         }
+
+        
         private void loadTiles()
         {
-            int Xtile = 10;
-            int Ytile = 5;
+           
             int PHeigt = (int) (Height  * 0.3) / Ytile;
             int pwidth = Width / Xtile;
             cp =  new picturebox.picturebox[Ytile,Xtile];
+            
             for (int i=0; i < Ytile; i++)
             {
                 for (int j = 0; j < Xtile; j++)
@@ -72,7 +81,7 @@ namespace proyectoPOO
                     cp[i,j].BackgroundImage = Image.FromFile("../../Sprites/" + ( i + 1 ) + ".png");
                     cp[i, j].BackgroundImageLayout = ImageLayout.Stretch;
                     //para despues
-                    cp[i, j].Tag = "Tag";
+                    cp[i, j].Tag = "Tag"; 
                     Controls.Add(cp[i, j]);
                 }
                 
@@ -109,13 +118,65 @@ namespace proyectoPOO
            if (pictureBoxBall.Bounds.IntersectsWith(Player.Bounds))
            {
                verticalBallMovement = -verticalBallMovement;
-           }
-           //detect collision with block
-             /* blocks();
-               Player_rebound();
-               Life();*/
-               
-                   }
+           } }
+
+        private void blocks()
+        {
+            if (pictureBoxBall.Left == 0 || pictureBoxBall.Right == 0)
+            {
+                horizontalBallMovement = -horizontalBallMovement;
+                return;
+            }
+
+            if (life == 0)
+            {
+                Life();
+                Application.Exit();
+            }
+
+            for (int y = 0; y < Ytile; y++)
+            {
+
+                for (int x = 0; x < Xtile; x++)
+                {
+                    if (pictureBoxBall.Bounds.IntersectsWith(cp[y, x].Bounds) && cp[y, x].Visible == true)
+                    {
+                        if (cp[y, x].Golpes > 0)
+                        {
+                            horizontalBallMovement = -horizontalBallMovement;
+                            verticalBallMovement = -verticalBallMovement;
+                            cp[y, x].Golpes--;
+                            changepicture(cp[y, x]);
+                            if (cp[y, x].Golpes == 0)
+                            {
+                                points += 1;
+                                cp[y, x].Visible = false;
+                                Controls.Remove(cp[y, x]);
+                                horizontalBallMovement = -horizontalBallMovement;
+                                verticalBallMovement = -verticalBallMovement;
+
+                            }
+
+                          
+
+
+
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+       
+
+        private void changepicture(picturebox.picturebox block)
+        {
+            
+            block.BackgroundImage = Image.FromFile("../../Sprites/1.5.png");
+            
+        }
 
 
         private void Game__MouseMove(object sender, MouseEventArgs e)
@@ -141,6 +202,12 @@ namespace proyectoPOO
 
             movement();
             lbPoints.Text = points.ToString();
+            //detect collision with block
+          
+            blocks();
+           
+            /*Player_rebound();*/
+            Life();
 
         }
 
