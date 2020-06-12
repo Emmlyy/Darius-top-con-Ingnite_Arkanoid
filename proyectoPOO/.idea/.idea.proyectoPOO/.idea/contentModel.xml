@@ -29,21 +29,18 @@
       <e p="proyectoPOO.csproj" t="IncludeRecursive" />
       <e p="proyectoPOO.sln" t="IncludeFlat" />
       <e p="Views" t="Include">
-        <e p="Form1.cs" t="Include" />
-        <e p="Form1.Designer.cs" t="Include" />
-        <e p="Form1.resx" t="Include" />
-        <e p="Game..cs" t="Include" />
-        <e p="Game..Designer.cs" t="Include" />
-        <e p="Game..resx" t="Include" />
-        <e p="Game.cs" t="Include" />
-        <e p="Game.Designer.cs" t="Include" />
-        <e p="Game.resx" t="Include" />
-        <e p="Jugar.cs" t="Include" />
-        <e p="Jugar.Designer.cs" t="Include" />
-        <e p="Jugar.resx" t="Include" />
-        <e p="Puntaje.cs" t="Include" />
-        <e p="Puntaje.Designer.cs" t="Include" />
-        <e p="Puntaje.resx" t="Include" />
+        <e p="FrmGame.cs" t="Include" />
+        <e p="FrmGame.Designer.cs" t="Include" />
+        <e p="FrmGame.resx" t="Include" />
+        <e p="frmMain.cs" t="Include" />
+        <e p="frmMain.Designer.cs" t="Include" />
+        <e p="frmMain.resx" t="Include" />
+        <e p="Play.cs" t="Include" />
+        <e p="Play.Designer.cs" t="Include" />
+        <e p="Play.resx" t="Include" />
+        <e p="Score.cs" t="Include" />
+        <e p="Score.Designer.cs" t="Include" />
+        <e p="Score.resx" t="Include" />
       </e>
     </e>
   </component>

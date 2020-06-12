@@ -2,7 +2,7 @@
 
 namespace proyectoPOO
 {
-    partial class Game_
+    partial class FrmGame
     {
         /// <summary>
         /// Required designer variable.
@@ -32,14 +32,15 @@ namespace proyectoPOO
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game_));
+            System.ComponentModel.ComponentResourceManager resources =
+                new System.ComponentModel.ComponentResourceManager(typeof(FrmGame));
             this.pictureBoxBall = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
             this.timerForMovements = new System.Windows.Forms.Timer(this.components);
             this.life1 = new System.Windows.Forms.PictureBox();
             this.life2 = new System.Windows.Forms.PictureBox();
             this.life3 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Panel = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbPoints = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxBall)).BeginInit();
@@ -47,12 +48,13 @@ namespace proyectoPOO
             ((System.ComponentModel.ISupportInitialize) (this.life1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.life2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.life3)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBoxBall
             // 
-            this.pictureBoxBall.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxBall.BackgroundImage")));
+            this.pictureBoxBall.BackgroundImage =
+                ((System.Drawing.Image) (resources.GetObject("pictureBoxBall.BackgroundImage")));
             this.pictureBoxBall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxBall.Location = new System.Drawing.Point(509, 289);
             this.pictureBoxBall.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -112,29 +114,35 @@ namespace proyectoPOO
             this.life3.TabIndex = 28;
             this.life3.TabStop = false;
             // 
-            // tableLayoutPanel1
+            // Panel
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Controls.Add(this.life1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.life3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.life2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lbPoints, 5, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(708, 51);
-            this.tableLayoutPanel1.TabIndex = 29;
+            this.Panel.BackColor = System.Drawing.Color.Transparent;
+            this.Panel.ColumnCount = 6;
+            this.Panel.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.Panel.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.Panel.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.Panel.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.Panel.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.Panel.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.Panel.Controls.Add(this.life1, 0, 0);
+            this.Panel.Controls.Add(this.life3, 2, 0);
+            this.Panel.Controls.Add(this.life2, 1, 0);
+            this.Panel.Controls.Add(this.label1, 4, 0);
+            this.Panel.Controls.Add(this.lbPoints, 5, 0);
+            this.Panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Panel.Name = "Panel";
+            this.Panel.RowCount = 1;
+            this.Panel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.Panel.Size = new System.Drawing.Size(708, 51);
+            this.Panel.TabIndex = 29;
             // 
             // label1
             // 
@@ -165,11 +173,12 @@ namespace proyectoPOO
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(708, 465);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.Panel);
             this.Controls.Add(this.Player);
             this.Controls.Add(this.pictureBoxBall);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Game_";
@@ -182,7 +191,7 @@ namespace proyectoPOO
             ((System.ComponentModel.ISupportInitialize) (this.life1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.life2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.life3)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.Panel.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
@@ -193,11 +202,12 @@ namespace proyectoPOO
         private System.Windows.Forms.PictureBox life3;
         private System.Windows.Forms.PictureBox pictureBoxBall;
         private System.Windows.Forms.PictureBox Player;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Timer timerForMovements;
 
         private System.Windows.Forms.Timer timer1;
 
         #endregion
+
+        private System.Windows.Forms.TableLayoutPanel Panel;
     }
 }

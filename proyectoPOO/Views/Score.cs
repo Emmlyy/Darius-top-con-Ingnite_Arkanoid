@@ -11,10 +11,10 @@ using PieChart = LiveCharts.WinForms.PieChart;
 
 namespace proyectoPOO
 {
-    public partial class Puntaje : UserControl
+    public partial class Score : UserControl
     {
         private CartesianChart chart;
-        public Puntaje()
+        public Score()
         {
             InitializeComponent();
             chart =new CartesianChart();

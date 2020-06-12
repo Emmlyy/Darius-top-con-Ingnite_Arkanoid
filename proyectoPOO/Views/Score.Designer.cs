@@ -2,7 +2,7 @@
 
 namespace proyectoPOO
 {
-    partial class Puntaje
+    partial class Score
     {
         /// <summary> 
         /// Required designer variable.

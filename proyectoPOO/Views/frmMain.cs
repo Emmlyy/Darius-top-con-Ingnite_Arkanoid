@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace proyectoPOO
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
         private UserControl change;
-        private Jugar jg = new Jugar();
-        private Puntaje pun = new Puntaje();
-        public Form1()
+        private Play jg = new Play();
+        private Score pun = new Score();
+        
+        public frmMain()
         {
             InitializeComponent();
             Height = ClientSize.Height;
@@ -44,7 +45,7 @@ namespace proyectoPOO
             btnClosed.Visible = false;
             pictureBox1.Hide();
             tableLayoutPanel1.Controls.Remove(change);
-            change = new Puntaje();
+            change = new Score();
             change.Dock = DockStyle.Fill;
             tableLayoutPanel1.Controls.Add(change, 0, 0);
             tableLayoutPanel1.SetRowSpan(change,6);

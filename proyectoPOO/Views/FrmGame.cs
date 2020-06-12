@@ -6,7 +6,7 @@ using proyectoPOO.picturebox;
 
 namespace proyectoPOO
 {
-    public partial class Game_ : Form
+    public partial class FrmGame : Form
     {
         public const int Xard = 10;
         public const int Yard = 1;
@@ -18,7 +18,7 @@ namespace proyectoPOO
         public const int Ytile = 5;
         private picturebox.picturebox[,] cp;
       /*  private picturebox.PictureBlock[,] Blocks;*/
-        public Game_()
+        public FrmGame()
         { 
             InitializeComponent();
             life = 3;
@@ -30,7 +30,7 @@ namespace proyectoPOO
             horizontalBallMovement = 10;
             verticalBallMovement = -horizontalBallMovement;
         }
-private void Game__Load(object sender, EventArgs e)
+    private void Game__Load(object sender, EventArgs e)
         {
             loadTiles();
             loadPlayer();
@@ -38,8 +38,6 @@ private void Game__Load(object sender, EventArgs e)
          
         }
      
-        
-
         private void loadPlayer()
         {
             
@@ -50,6 +48,10 @@ private void Game__Load(object sender, EventArgs e)
             
             pictureBoxBall.Top = (Player.Top - pictureBoxBall.Height );
             pictureBoxBall.Left = (Width / 2);
+
+            Panel.Top = 0;
+            Panel.Height = (int) (Height  * 0.3) / Ytile;
+            Panel.Dock = DockStyle.Top;
 
         }
 
@@ -156,10 +158,6 @@ private void Game__Load(object sender, EventArgs e)
                                 verticalBallMovement = -verticalBallMovement;
 
                             }
-
-                          
-
-
 
                         }
 

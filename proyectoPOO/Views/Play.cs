@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace proyectoPOO
 { 
-    public partial class Jugar : UserControl
+    public partial class Play : UserControl
     {    
-        public Jugar()
+        public Play()
         {
             InitializeComponent();
         }
@@ -30,7 +30,7 @@ namespace proyectoPOO
                     Form temp = this.FindForm();
                     temp.Hide();
                     //temp.Dispose();
-                    Game_ game = new Game_();
+                    FrmGame game = new FrmGame();
                     game.ShowDialog();
                 }
                 catch (Exception)
