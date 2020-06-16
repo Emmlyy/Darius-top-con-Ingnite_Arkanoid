@@ -35,7 +35,7 @@ namespace proyectoPOO
                 new System.ComponentModel.ComponentResourceManager(typeof(Play));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.btnPlay = new System.Windows.Forms.Button();
+            this.BtnPlay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +52,7 @@ namespace proyectoPOO
             this.tableLayoutPanel1.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Controls.Add(this.txtUsuario, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnPlay, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.BtnPlay, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -77,19 +77,19 @@ namespace proyectoPOO
             this.txtUsuario.Size = new System.Drawing.Size(328, 23);
             this.txtUsuario.TabIndex = 1;
             // 
-            // btnPlay
+            // BtnPlay
             // 
-            this.btnPlay.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPlay.BackColor = System.Drawing.Color.Tomato;
-            this.btnPlay.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Italic,
+            this.BtnPlay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnPlay.BackColor = System.Drawing.Color.Tomato;
+            this.BtnPlay.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Italic,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnPlay.Location = new System.Drawing.Point(224, 273);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(257, 43);
-            this.btnPlay.TabIndex = 2;
-            this.btnPlay.Text = "Play";
-            this.btnPlay.UseVisualStyleBackColor = false;
-            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            this.BtnPlay.Location = new System.Drawing.Point(224, 273);
+            this.BtnPlay.Name = "BtnPlay";
+            this.BtnPlay.Size = new System.Drawing.Size(257, 43);
+            this.BtnPlay.TabIndex = 2;
+            this.BtnPlay.Text = "Play";
+            this.BtnPlay.UseVisualStyleBackColor = false;
+            this.BtnPlay.Click += new System.EventHandler(this.BtnPlay_Click);
             // 
             // label1
             // 
@@ -119,11 +119,12 @@ namespace proyectoPOO
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox txtUsuario;
 
         #endregion
+
+        private System.Windows.Forms.Button BtnPlay;
     }
 }

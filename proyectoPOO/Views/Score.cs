@@ -68,7 +68,8 @@ namespace proyectoPOO
         }
         private List<User> Obtener()
         {
-            string sql = "SELECT \"UserID\", \"Points\" FROM public.\"User\" ORDER BY \"Points\" DESC FETCH FIRST 10 ROWS ONLY;";
+            string sql = "SELECT \"UserID\", \"Points\" FROM public.\"User\" ORDER BY \"Points\"" +
+                         " DESC FETCH FIRST 10 ROWS ONLY;";
             List<User> list = new List<User>();
             DataTable dt= Connection.Query(sql);
             foreach (DataRow fila in dt.Rows)

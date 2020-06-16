@@ -12,7 +12,7 @@ namespace proyectoPOO
         }
 
 
-        private void btnPlay_Click(object sender, EventArgs e)
+        private void BtnPlay_Click(object sender, EventArgs e)
         {
             if (txtUsuario.Text.Equals(""))
             {
@@ -22,6 +22,8 @@ namespace proyectoPOO
             {
                 try
                 {
+                    
+                    //Consultar en la BASE DE DATOS
                     string sql = "SELECT \"UserID\",\"Points\" FROM public.\"User\" WHERE \"UserID\"='"+txtUsuario.Text+"';";
                     var user = Connection.Query(sql);
                     string name = user.Rows[0][0].ToString();
@@ -35,6 +37,7 @@ namespace proyectoPOO
                 }
                 catch (Exception)
                 {
+                    //Agregar Usuario a la BD
                     string noSql = "INSERT INTO public.\"User\"(\"UserID\", \"Points\")VALUES ('"+txtUsuario.Text+"', 0);";
                     Connection.noQuery(noSql);
                     MessageBox.Show("Registrado\n"+"Nickname: "+txtUsuario.Text+"\nPuntos: 0");

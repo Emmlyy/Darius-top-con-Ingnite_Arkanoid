@@ -14,23 +14,28 @@ namespace proyectoPOO
     {
         private UserControl change;
         private Play jg = new Play();
-        private Score pun = new Score();
-        
+
         public frmMain()
         {
             InitializeComponent();
+            //Maximizar ventana
             Height = ClientSize.Height;
             Width = ClientSize.Width;
             WindowState = FormWindowState.Maximized;
+            
+            //???
             jg.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             jg.Dock = DockStyle.Fill;
         }
 
         private void bntPlayy_Click(object sender, EventArgs e)
         {
+            //ocultar los botones de la ventana
             btnPlayy.Visible = false;
             btnPoint.Visible = false;
             btnClosed.Visible = false;
+            
+            //cambiar el usercontrol
             tableLayoutPanel1.Controls.Remove(change);
             tableLayoutPanel1.Controls.Add(jg, 0, 0);
             change = jg;
@@ -40,10 +45,13 @@ namespace proyectoPOO
 
         private void bntPoint_Click(object sender, EventArgs e)
         {
+            //ocultar los botones de la ventana
             btnPlayy.Visible = false;
             btnPoint.Visible = false;
             btnClosed.Visible = false;
             pictureBox1.Hide();
+            
+            //cambiar userControl
             tableLayoutPanel1.Controls.Remove(change);
             change = new Score();
             change.Dock = DockStyle.Fill;

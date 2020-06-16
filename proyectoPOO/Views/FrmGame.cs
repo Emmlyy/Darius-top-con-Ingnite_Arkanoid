@@ -8,55 +8,63 @@ namespace proyectoPOO
 {
     public partial class FrmGame : Form
     {
+        //borrar?
         public const int Xard = 10;
         public const int Yard = 1;
+        
         public int verticalBallMovement;
         public int horizontalBallMovement;
-        public int life, points;
-        private bool statusGame = false;
+        
+        //cambiar esto ya que creo q tambien tiene q ir desde GameData
         public const int Xtile = 10;
         public const int Ytile = 5;
+        
+        //Elementos visuales de la ventana
         private picturebox.picturebox[,] cp;
+        private Label points;
+        private Panel scores;
+        private PictureBox[] life;
+        
       /*  private picturebox.PictureBlock[,] Blocks;*/
+      
         public FrmGame()
         { 
             InitializeComponent();
-            life = 3;
-            points = 0;
+            
+            //Maximizar pantalla
             Height = ClientSize.Height;
             Width = ClientSize.Width;
             WindowState = FormWindowState.Maximized;
-            statusGame = false;
+            
+            //explicar para que es
             horizontalBallMovement = 10;
             verticalBallMovement = -horizontalBallMovement;
         }
     private void Game__Load(object sender, EventArgs e)
         {
-            loadTiles();
-            loadPlayer();
-            Life();
-         
+            LoadTiles();
+            LoadPlayer();
+            LoadPanel();
         }
      
-        private void loadPlayer()
+        private void LoadPlayer()
         {
-            
+            //PLATAFORMA
             Player.BackgroundImage = Image.FromFile("../../Sprites/Player.png");
             Player.BackgroundImageLayout = ImageLayout.Stretch;
             Player.Top = (Height - Player.Height )- 80;
             Player.Left = (Width / 2)-(Player.Width/2);
             
+            //PELOTA
+            pictureBoxBall.BackgroundImage = Image.FromFile("../../Sprites/Ball.png");
+            Player.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBoxBall.Top = (Player.Top - pictureBoxBall.Height );
             pictureBoxBall.Left = (Width / 2);
-
-            Panel.Top = 0;
-            Panel.Height = (int) (Height  * 0.3) / Ytile;
-            Panel.Dock = DockStyle.Top;
-
+            
         }
 
         
-        private void loadTiles()
+        private void LoadTiles()
         {
            
             int PHeigt = (int) (Height  * 0.3) / Ytile;
@@ -91,18 +99,26 @@ namespace proyectoPOO
             }
         }
 
-        private void movement()
+        private void Movement()
         {
             pictureBoxBall.Top += -verticalBallMovement;
             pictureBoxBall.Left += horizontalBallMovement;
+            
            if (pictureBoxBall.Bottom > this.ClientSize.Height)
            {
+               //REINICIAR 
                pictureBoxBall.Top = (Player.Top - pictureBoxBall.Height );
-               statusGame = false;
-               life -= 1;
+               GameData.statusGame = false;
+               GameData.lifes -= 1;
                MessageBox.Show("-1 vida");
-               Life();
-               //verticalBallMovement = -verticalBallMovement;
+               timer1.Stop();
+               UptadeLife();
+               
+               if (GameData.lifes == 0)
+               {
+                   timer1.Stop();
+                 //TERMINAR JUEGO
+               }
            }
            else if (pictureBoxBall.Top < 0)
            {
@@ -122,7 +138,7 @@ namespace proyectoPOO
                verticalBallMovement = -verticalBallMovement;
            } }
 
-        private void blocks()
+        private void Blocks()
         {
             if (pictureBoxBall.Left == 0 || pictureBoxBall.Right == 0)
             {
@@ -130,11 +146,11 @@ namespace proyectoPOO
                 return;
             }
 
-            if (life == 0)
+            /* 
+             if (GameData.lifes == 0)
             {
-                Life();
-                Application.Exit();
-            }
+                Application.Exit(); 
+            }*/
 
             for (int y = 0; y < Ytile; y++)
             {
@@ -148,10 +164,10 @@ namespace proyectoPOO
                             horizontalBallMovement = -horizontalBallMovement;
                             verticalBallMovement = -verticalBallMovement;
                             cp[y, x].Golpes--;
-                            changepicture(cp[y, x]);
+                            Changepicture(cp[y, x]);
                             if (cp[y, x].Golpes == 0)
                             {
-                                points += 1;
+                                GameData.points += 1;
                                 cp[y, x].Visible = false;
                                 Controls.Remove(cp[y, x]);
                                 horizontalBallMovement = -horizontalBallMovement;
@@ -166,10 +182,8 @@ namespace proyectoPOO
                 }
             }
         }
-
-       
-
-        private void changepicture(picturebox.picturebox block)
+        
+        private void Changepicture(picturebox.picturebox block)
         {
             
             block.BackgroundImage = Image.FromFile("../../Sprites/1.5.png");
@@ -179,10 +193,13 @@ namespace proyectoPOO
 
         private void Game__MouseMove(object sender, MouseEventArgs e)
         {
-            if (!statusGame)
+            if (!GameData.statusGame)
             {
-                Player.Left = e.X;
-                pictureBoxBall.Left = e.X + Player.Width/2 - pictureBoxBall.Width/2;
+                if (e.X < (Width - Player.Width))
+                {
+                    Player.Left = e.X;
+                    pictureBoxBall.Left = Player.Left + (Player.Width / 2) - (pictureBoxBall.Width / 2);
+                }
             }
             if (e.X < (Width - Player.Width))
             {
@@ -191,21 +208,16 @@ namespace proyectoPOO
             }
         }
 
-        private void timerForMovements_Tick(object sender, EventArgs e)
+        private void TimerForMovements_Tick(object sender, EventArgs e)
         {
-            if (!statusGame)
+            if (!GameData.statusGame)
             {
                 return;
             }
 
-            movement();
-            lbPoints.Text = points.ToString();
+            Movement();
             //detect collision with block
-          
-            blocks();
-           
-            /*Player_rebound();*/
-            Life();
+            Blocks();
 
         }
 
@@ -213,35 +225,70 @@ namespace proyectoPOO
         {
             if (e.KeyCode==Keys.Space)
             {
-                statusGame = true;
+                GameData.statusGame = true;
+                timer1.Start();
             }
+            
         }
-        private void Life()
+
+        private void LoadPanel()
         {
-            switch (life)
+           
+            // Instanciar panel
+            scores = new Panel();
+
+            // Setear elementos del panel
+            scores.Width = Width;
+            scores.Height = (int)(Height * 0.07);
+            scores.Top = scores.Left = 0;
+            scores.BackColor = Color.Black;
+            
+            life = new PictureBox[GameData.lifes];
+
+            for(int i = 0; i < GameData.lifes; i++)
             {
-                case 0:
-                    life1.Visible = false;
-                    life2.Visible = false;
-                    life3.Visible = false;
-                    MessageBox.Show("GAME OVER");
-                    break;
-                case 1:
-                    life1.Visible = true;
-                    life2.Visible = false;
-                    life3.Visible = false;
-                    break;
-                case 2:
-                    life1.Visible = true;
-                    life2.Visible = true;
-                    life3.Visible = false;
-                    break;
-                case 3: 
-                    life1.Visible = true;
-                    life2.Visible = true;
-                    life3.Visible = true;
-                    break;
+                // Instanciacion de pb
+                life[i] = new PictureBox();
+
+                life[i].Height = life[i].Width = scores.Height;
+
+                life[i].BackgroundImage = Image.FromFile("../../Sprites/Heart.png");
+                life[i].BackgroundImageLayout = ImageLayout.Stretch;
+
+                life[i].Top = 0;
+
+                if (i == 0)
+                     life[i].Left = 20;
+                else
+                {
+                    life[i].Left = life[i - 1].Right + 5;
+                }
             }
+            
+
+            // Instanciar labels
+            points = new Label();
+
+            // Setear elementos de los labels
+            points.ForeColor = Color.White;
+            points.Text = GameData.lifes.ToString();
+            points.Left = Width - 100;
+            points.Font= new Font("Times New Roman",24);
+            
+            scores.Controls.Add(points);
+
+            foreach(var pb in life)
+            {
+                scores.Controls.Add(pb);
+            }
+
+            Controls.Add(scores); 
+        }
+        
+        private void UptadeLife()
+        {
+            scores.Controls.Remove(life[GameData.lifes]);
+            life[GameData.lifes] = null;
         }
     }
     }

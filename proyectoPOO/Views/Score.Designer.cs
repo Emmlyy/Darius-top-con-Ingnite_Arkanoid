@@ -85,12 +85,12 @@ namespace proyectoPOO
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // Puntaje
+            // Score
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Contenedor);
-            this.Name = "Puntaje";
+            this.Name = "Score";
             this.Size = new System.Drawing.Size(537, 415);
             this.Load += new System.EventHandler(this.Puntaje_Load);
             this.Contenedor.ResumeLayout(false);
