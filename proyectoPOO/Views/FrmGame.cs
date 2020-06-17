@@ -11,11 +11,11 @@ namespace proyectoPOO
         public int verticalBallMovement;
         public int horizontalBallMovement;
         
-        //cambiar esto ya que creo q tambien tiene q ir desde GameData
+        //Mayi!
         public const int Xtile = 10;
         public const int Ytile = 5;
         
-        //Elementos visuales de la ventana
+        //Visual elements of the WindowsForm
         private picturebox.picturebox[,] cp;
         private Label points;
         private Panel scores;
@@ -30,7 +30,7 @@ namespace proyectoPOO
             Width = ClientSize.Width;
             WindowState = FormWindowState.Maximized;
             
-            //explicar para que es
+            //Used for the initial movement of the ball
             horizontalBallMovement = 10;
             verticalBallMovement = -horizontalBallMovement;
         }
@@ -43,13 +43,13 @@ namespace proyectoPOO
      
         private void LoadPlayer()
         {
-            //PLATAFORMA
+            //Plataform
             Player.BackgroundImage = Image.FromFile("../../Sprites/Player.png");
             Player.BackgroundImageLayout = ImageLayout.Stretch;
             Player.Top = (Height - Player.Height )- 80;
             Player.Left = (Width / 2)-(Player.Width/2);
             
-            //PELOTA
+            //Ball
             pictureBoxBall.BackgroundImage = Image.FromFile("../../Sprites/Ball.png");
             Player.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBoxBall.Top = (Player.Top - pictureBoxBall.Height );
@@ -76,13 +76,13 @@ namespace proyectoPOO
                     cp[i, j].Height = PHeigt;
                     cp[i, j].Width = pwidth;
                     
-                    //posicion de left  y top
+                    //position de left  y top
                     cp[i, j].Left = j * pwidth;
                     cp[i, j].Top = i * PHeigt +60;
                     
                     cp[i,j].BackgroundImage = Image.FromFile("../../Sprites/" + ( i + 1 ) + ".png");
                     cp[i, j].BackgroundImageLayout = ImageLayout.Stretch;
-                    //para despues
+                    //para despues MAYI
                     cp[i, j].Tag = "Tag"; 
                     Controls.Add(cp[i, j]);
                 }
@@ -97,7 +97,7 @@ namespace proyectoPOO
             
             if (pictureBoxBall.Bottom > this.ClientSize.Height) 
             {
-               //REINICIAR 
+               //Restart 
                pictureBoxBall.Top = (Player.Top - pictureBoxBall.Height );
                GameData.statusGame = false;
                GameData.lifes -= 1;
@@ -125,7 +125,7 @@ namespace proyectoPOO
                    {
                        Application.Restart();
                    }
-                   //TERMINAR JUEGO
+                   //End Game
                }
            }
            else if (pictureBoxBall.Top < 0)
@@ -272,10 +272,10 @@ namespace proyectoPOO
             }
             
 
-            // Instanciar labels
+            // instance labels
             points = new Label();
 
-            // Setear elementos de los labels
+            // Set elements of the labels
             points.ForeColor = Color.White;
             points.Text = GameData.lifes.ToString();
             points.Left = Width - 100;
