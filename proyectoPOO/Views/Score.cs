@@ -28,6 +28,7 @@ namespace proyectoPOO
         {
             try
             {
+                //Especificaciones de la grafica
                 chart.Top = 10;
                 chart.Left = 10;
                 chart.Width = 300;
@@ -35,8 +36,11 @@ namespace proyectoPOO
                 chart.Dock = DockStyle.Fill;
                 chart.BackColor = Color.Transparent;
                 
+                //obtener lista del top
                 List<User> u = new List<User>();
-                u = Obtener();
+                u = ControllersGame.Top();
+                
+                //creando grafica con campos vacios
                 chart.Series = new SeriesCollection
                 {
                     new RowSeries{Title = "Top 10", Values = new ChartValues<int>(),DataLabels = true}
@@ -55,6 +59,8 @@ namespace proyectoPOO
                 }*/
                 u.Reverse();
                 chart.LegendLocation = LegendLocation.Bottom;
+                
+                //llenando campos de la grafico
                 foreach (var x in u)
                 {
                     chart.Series[0].Values.Add(x.point);
@@ -66,20 +72,6 @@ namespace proyectoPOO
                 MessageBox.Show("Error en grafica");
             }
         }
-        private List<User> Obtener()
-        {
-            string sql = "SELECT \"UserID\", \"Points\" FROM public.\"User\" ORDER BY \"Points\"" +
-                         " DESC FETCH FIRST 10 ROWS ONLY;";
-            List<User> list = new List<User>();
-            DataTable dt= Connection.Query(sql);
-            foreach (DataRow fila in dt.Rows)
-            {
-                User u= new User();
-                u.name = fila[0].ToString();
-                u.point=Convert.ToInt32(fila[1].ToString());
-                list.Add(u);
-            }
-            return list;
-        }
+        
     }
 }

@@ -22,25 +22,30 @@ namespace proyectoPOO
             {
                 try
                 {
-                    
+
                     //Consultar en la BASE DE DATOS
-                    string sql = "SELECT \"UserID\",\"Points\" FROM public.\"User\" WHERE \"UserID\"='"+txtUsuario.Text+"';";
-                    var user = Connection.Query(sql);
-                    string name = user.Rows[0][0].ToString();
-                    string points = user.Rows[0][1].ToString();
-                    MessageBox.Show("Bienvenido: " +name +"\nTus puntos actuales son: "+points);
+                    User u = new User();
+                    u = ControllersGame.Exist(txtUsuario.Text);
+
+                    MessageBox.Show("Bienvenido: " + u.name + "\nTus puntos actuales son: " + u.point);
                     Form temp = this.FindForm();
                     temp.Hide();
+
                     //temp.Dispose();
-                    FrmGame game = new FrmGame();
+                    FrmGame game = new FrmGame(u);
                     game.ShowDialog();
                 }
-                catch (Exception)
+                //hacemos una excepcion personalizada aqui mejor??
+                catch (UserException ex)
                 {
-                    //Agregar Usuario a la BD
-                    string noSql = "INSERT INTO public.\"User\"(\"UserID\", \"Points\")VALUES ('"+txtUsuario.Text+"', 0);";
-                    Connection.noQuery(noSql);
+                    MessageBox.Show(ex.Message + "creando...");
+                    ControllersGame.Add(txtUsuario.Text);
+                    
                     MessageBox.Show("Registrado\n"+"Nickname: "+txtUsuario.Text+"\nPuntos: 0");
+                }
+                catch (Exception exp)
+                {
+                    MessageBox.Show(exp.Message);
                 }
             }
         }

@@ -10,6 +10,7 @@ namespace proyectoPOO
     {
         public int verticalBallMovement;
         public int horizontalBallMovement;
+        public User user = new User();
         
         //Mayi!
         public const int Xtile = 10;
@@ -21,9 +22,10 @@ namespace proyectoPOO
         private Panel scores;
         private PictureBox[] life;
         /*  private picturebox.PictureBlock[,] Blocks;*/
-      public FrmGame()
+      public FrmGame(User u)
         { 
             InitializeComponent();
+            user = u;
             
             //Maximizar pantalla
             Height = ClientSize.Height;
@@ -105,6 +107,9 @@ namespace proyectoPOO
                UptadeLife();
                if (GameData.lifes == 0)
                {
+                   //actualizar datos en la BD
+                   ControllersGame.Update(user);
+                   
                    Form temp = this.FindForm();
                    temp.Controls.Clear();
                    if (MessageBox.Show("¿Desea jugar otra partida?",
@@ -118,7 +123,7 @@ namespace proyectoPOO
                        LoadPlayer();
                        LoadPanel();
                        temp.Close();
-                       FrmGame newGame = new FrmGame();
+                       FrmGame newGame = new FrmGame(user);
                        newGame.Show();
                    }
                    else
@@ -153,7 +158,7 @@ namespace proyectoPOO
                 horizontalBallMovement = -horizontalBallMovement;
                 return;
             }
-            /* 
+            /* ELINIMAR
              if (GameData.lifes == 0)
             {
                 Application.Exit(); 
@@ -174,6 +179,7 @@ namespace proyectoPOO
                             if (cp[y, x].Golpes == 0)
                             {
                                 GameData.points += 1;
+
                                 cp[y, x].Visible = false;
                                 Controls.Remove(cp[y, x]);
                                 horizontalBallMovement = -horizontalBallMovement;
@@ -181,6 +187,8 @@ namespace proyectoPOO
 
                             }
 
+                            points.Text = GameData.points.ToString();
+                            return;
                         }
 
                     }
@@ -221,7 +229,7 @@ namespace proyectoPOO
             {
                 return;
             }
-
+            //movimiento de la pelota
             Movement();
             //detect collision with block
             Blocks();
@@ -277,9 +285,9 @@ namespace proyectoPOO
 
             // Set elements of the labels
             points.ForeColor = Color.White;
-            points.Text = GameData.lifes.ToString();
+            points.Text = GameData.points.ToString();
             points.Left = Width - 100;
-            points.Font= new Font("Times New Roman",24);
+            points.Font= new Font("Times New Roman",28F);
             
             scores.Controls.Add(points);
 

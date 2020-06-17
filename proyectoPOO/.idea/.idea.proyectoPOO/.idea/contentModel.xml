@@ -8,9 +8,11 @@
       <e p="bin" t="ExcludeRecursive" />
       <e p="Controllers" t="Include">
         <e p="Connection.cs" t="Include" />
-        <e p="GameData.cs" t="Include" />
+        <e p="ControllersGame.cs" t="Include" />
+        <e p="UserException.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
+        <e p="GameData.cs" t="Include" />
         <e p="User.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
