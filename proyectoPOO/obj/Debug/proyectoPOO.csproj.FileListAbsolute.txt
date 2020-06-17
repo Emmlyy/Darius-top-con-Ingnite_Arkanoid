@@ -127,10 +127,7 @@ C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoP
 C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\System.ValueTuple.xml
 C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csprojAssemblyReference.cache
 C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.exe.config
-C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Form1.resources
 C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Properties.Resources.resources
-C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Jugar.resources
-C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Puntaje.resources
 C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csproj.GenerateResource.cache
 C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.csproj.CopyComplete
 C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.exe
@@ -144,7 +141,6 @@ C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\p
 C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.WinForms.xml
 C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\LiveCharts.Wpf.xml
-C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Game.resources
 C:\Users\MORIS\Desktop\finalproyect2\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\proyectoPOO.exe.config
 C:\Users\MORIS\Desktop\finalproyect2\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\proyectoPOO.exe
 C:\Users\MORIS\Desktop\finalproyect2\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\bin\Debug\proyectoPOO.pdb
@@ -191,8 +187,11 @@ C:\Users\MORIS\Desktop\finalproyect2\Darius-top-con-Ingnite_Arkanoid\proyectoPOO
 C:\Users\MORIS\Desktop\finalproyect2\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.exe
 C:\Users\MORIS\Desktop\finalproyect2\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.pdb
 C:\Users\MORIS\Desktop\finalproyect2\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Game_.resources
-C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Game_.resources
 C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.frmMain.resources
 C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Play.resources
 C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Score.resources
 C:\Users\Laboratorio\Desktop\EMELY\POO\proyect\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.FrmGame.resources
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.frmMain.resources
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.FrmGame.resources
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Play.resources
+C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO\obj\Debug\proyectoPOO.Score.resources

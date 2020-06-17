@@ -106,7 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Connection.cs" />
-    <Compile Include="Controllers\GameData.cs" />
+    <Compile Include="Models\GameData.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="picturebox\picturebox.cs" />
     <Compile Include="Program.cs" />

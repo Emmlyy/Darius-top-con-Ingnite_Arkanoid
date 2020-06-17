@@ -8,10 +8,6 @@ namespace proyectoPOO
 {
     public partial class FrmGame : Form
     {
-        //borrar?
-        public const int Xard = 10;
-        public const int Yard = 1;
-        
         public int verticalBallMovement;
         public int horizontalBallMovement;
         
@@ -24,10 +20,8 @@ namespace proyectoPOO
         private Label points;
         private Panel scores;
         private PictureBox[] life;
-        
-      /*  private picturebox.PictureBlock[,] Blocks;*/
-      
-        public FrmGame()
+        /*  private picturebox.PictureBlock[,] Blocks;*/
+      public FrmGame()
         { 
             InitializeComponent();
             
@@ -62,8 +56,6 @@ namespace proyectoPOO
             pictureBoxBall.Left = (Width / 2);
             
         }
-
-        
         private void LoadTiles()
         {
            
@@ -98,26 +90,42 @@ namespace proyectoPOO
                 
             }
         }
-
         private void Movement()
         {
             pictureBoxBall.Top += -verticalBallMovement;
             pictureBoxBall.Left += horizontalBallMovement;
             
-           if (pictureBoxBall.Bottom > this.ClientSize.Height)
-           {
+            if (pictureBoxBall.Bottom > this.ClientSize.Height) 
+            {
                //REINICIAR 
                pictureBoxBall.Top = (Player.Top - pictureBoxBall.Height );
                GameData.statusGame = false;
                GameData.lifes -= 1;
-               MessageBox.Show("-1 vida");
-               timer1.Stop();
+               MessageBox.Show("-1 vida"+pictureBoxBall.Bottom+" "+ClientSize.Height);
                UptadeLife();
-               
                if (GameData.lifes == 0)
                {
-                   timer1.Stop();
-                 //TERMINAR JUEGO
+                   Form temp = this.FindForm();
+                   temp.Controls.Clear();
+                   if (MessageBox.Show("¿Desea jugar otra partida?",
+                           "Consulta",
+                           MessageBoxButtons.YesNo,
+                           MessageBoxIcon.Question)==DialogResult.Yes)
+                   {
+                       GameData.InicializarJuego();
+                       //Application.Restart();
+                       LoadTiles();
+                       LoadPlayer();
+                       LoadPanel();
+                       temp.Close();
+                       FrmGame newGame = new FrmGame();
+                       newGame.Show();
+                   }
+                   else
+                   {
+                       Application.Restart();
+                   }
+                   //TERMINAR JUEGO
                }
            }
            else if (pictureBoxBall.Top < 0)
@@ -145,13 +153,11 @@ namespace proyectoPOO
                 horizontalBallMovement = -horizontalBallMovement;
                 return;
             }
-
             /* 
              if (GameData.lifes == 0)
             {
                 Application.Exit(); 
             }*/
-
             for (int y = 0; y < Ytile; y++)
             {
 
@@ -199,6 +205,7 @@ namespace proyectoPOO
                 {
                     Player.Left = e.X;
                     pictureBoxBall.Left = Player.Left + (Player.Width / 2) - (pictureBoxBall.Width / 2);
+                    pictureBoxBall.Top = (Player.Top - pictureBoxBall.Height );
                 }
             }
             if (e.X < (Width - Player.Width))
@@ -226,7 +233,6 @@ namespace proyectoPOO
             if (e.KeyCode==Keys.Space)
             {
                 GameData.statusGame = true;
-                timer1.Start();
             }
             
         }
