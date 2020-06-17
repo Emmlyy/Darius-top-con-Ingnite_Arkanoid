@@ -48,7 +48,7 @@ namespace proyectoPOO
 
         public static void Update(User u)
         {
-            string noSql = ($"UPDATE User SET UserID= {u.name} WHERE Points = {u.point}");
+            string noSql = $"UPDATE User SET UserID= {u.name} WHERE Points = {u.point}";
             Connection.noQuery(noSql);
         }
     }

@@ -100,11 +100,12 @@ namespace proyectoPOO
             if (pictureBoxBall.Bottom > this.ClientSize.Height) 
             {
                //Restart 
-               pictureBoxBall.Top = (Player.Top - pictureBoxBall.Height );
+               LoadPlayer();
                GameData.statusGame = false;
                GameData.lifes -= 1;
-               MessageBox.Show("-1 vida"+pictureBoxBall.Bottom+" "+ClientSize.Height);
                UptadeLife();
+               MessageBox.Show("-1 vida");
+             
                if (GameData.lifes == 0)
                {
                    //actualizar datos en la BD
@@ -287,6 +288,7 @@ namespace proyectoPOO
             points.ForeColor = Color.White;
             points.Text = GameData.points.ToString();
             points.Left = Width - 100;
+            points.Height = scores.Height;
             points.Font= new Font("Times New Roman",28F);
             
             scores.Controls.Add(points);
