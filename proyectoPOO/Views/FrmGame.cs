@@ -12,7 +12,8 @@ namespace proyectoPOO
         public int horizontalBallMovement;
         public User user = new User();
         
-        //Mayi!
+        
+        //number of rows and columns of blocks
         public const int Xtile = 10;
         public const int Ytile = 5;
         
@@ -84,8 +85,7 @@ namespace proyectoPOO
                     
                     cp[i,j].BackgroundImage = Image.FromFile("../../Sprites/" + ( i + 1 ) + ".png");
                     cp[i, j].BackgroundImageLayout = ImageLayout.Stretch;
-                    //para despues MAYI
-                    cp[i, j].Tag = "Tag"; 
+                    //ADD rows and columns to the form
                     Controls.Add(cp[i, j]);
                 }
                 
@@ -159,11 +159,7 @@ namespace proyectoPOO
                 horizontalBallMovement = -horizontalBallMovement;
                 return;
             }
-            /* ELINIMAR
-             if (GameData.lifes == 0)
-            {
-                Application.Exit(); 
-            }*/
+           
             for (int y = 0; y < Ytile; y++)
             {
 
@@ -183,10 +179,16 @@ namespace proyectoPOO
 
                                 cp[y, x].Visible = false;
                                 Controls.Remove(cp[y, x]);
-                                horizontalBallMovement = -horizontalBallMovement;
                                 verticalBallMovement = -verticalBallMovement;
-
+                                verticalBallMovement = -horizontalBallMovement;
+                                //when you win 
+                                if (GameData.points > 49)
+                                {
+                                    timerForMovements.Stop();
+                                    MessageBox.Show("felicidades ha ganado");
+                                }
                             }
+                            
 
                             points.Text = GameData.points.ToString();
                             return;

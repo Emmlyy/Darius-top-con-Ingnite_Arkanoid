@@ -32,8 +32,7 @@ namespace proyectoPOO
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources =
-                new System.ComponentModel.ComponentResourceManager(typeof(FrmGame));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGame));
             this.pictureBoxBall = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
             this.timerForMovements = new System.Windows.Forms.Timer(this.components);
@@ -43,8 +42,7 @@ namespace proyectoPOO
             // 
             // pictureBoxBall
             // 
-            this.pictureBoxBall.BackgroundImage =
-                ((System.Drawing.Image) (resources.GetObject("pictureBoxBall.BackgroundImage")));
+            this.pictureBoxBall.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxBall.BackgroundImage")));
             this.pictureBoxBall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxBall.Location = new System.Drawing.Point(509, 289);
             this.pictureBoxBall.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -78,8 +76,7 @@ namespace proyectoPOO
             this.Controls.Add(this.Player);
             this.Controls.Add(this.pictureBoxBall);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FrmGame";
