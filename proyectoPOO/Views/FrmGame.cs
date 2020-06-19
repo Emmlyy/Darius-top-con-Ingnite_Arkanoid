@@ -8,11 +8,10 @@ namespace proyectoPOO
 {
     public partial class FrmGame : Form
     {
+        //Movements of ball
         public int verticalBallMovement;
         public int horizontalBallMovement;
-        public User user = new User();
-        
-        
+        public User user = new User();//Model of Player
         //number of rows and columns of blocks
         public const int Xtile = 10;
         public const int Ytile = 5;
@@ -28,7 +27,7 @@ namespace proyectoPOO
             InitializeComponent();
             user = u;
             
-            //Maximizar pantalla
+            //Maximize window
             Height = ClientSize.Height;
             Width = ClientSize.Width;
             WindowState = FormWindowState.Maximized;
@@ -59,6 +58,7 @@ namespace proyectoPOO
             pictureBoxBall.Left = (Width / 2);
             
         }
+        //Set Blocks
         private void LoadTiles()
         {
            
@@ -93,47 +93,52 @@ namespace proyectoPOO
                 
             }
         }
-
+        //Infinite Movement
         private void Movement()
         {
+            //Position
             pictureBoxBall.Top += -verticalBallMovement;
             pictureBoxBall.Left += horizontalBallMovement;
-
+            //When the ball touches the window's bottom edge a life is lost    
             if (pictureBoxBall.Bottom > this.ClientSize.Height)
             {
                 //Restart 
                 LoadPlayer();
                 GameData.statusGame = false;
-                GameData.lifes -= 1;
+                GameData.lifes -= 1;//life lost
                 UptadeLife();
                 MessageBox.Show("-1 vida");
                 if (GameData.lifes == 0)
                 {
+                    timerForMovements.Stop();
                     endGame();
                     //End Game
                 }
             }
+            //Negative VerticalMovement
             else if (pictureBoxBall.Top < 0)
             {
                 verticalBallMovement = -verticalBallMovement; 
             }
+            //Negative HorizontalMovement
             else if (pictureBoxBall.Right > this.ClientSize.Width)
             {
                horizontalBallMovement = -horizontalBallMovement;
             }
+            //for the lateral edges
             else if (pictureBoxBall.Left < 0)
             {
                horizontalBallMovement = -horizontalBallMovement;
             }
-
+            //For the ball when it touch the platform
             if (pictureBoxBall.Bounds.IntersectsWith(Player.Bounds)==true)
             {
                verticalBallMovement = -verticalBallMovement;
             } }
-
+        //When the game is over to win or lose
         private void endGame()
         {
-            ControllersGame.Update(user);
+            ControllersGame.Update(user);//Update points
             Form temp = this.FindForm();
             temp.Controls.Clear();
             if (MessageBox.Show("¿Desea jugar otra partida?",
@@ -141,6 +146,7 @@ namespace proyectoPOO
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                //Reload Data al newForm
                 GameData.InicializarJuego();
                 //Application.Restart();
                 LoadTiles();
@@ -152,23 +158,20 @@ namespace proyectoPOO
             }
             else
             {
+                //Rstart App!
                 Application.Restart();
             }
         }
+        //For Collisions
         private void Blocks()
         {
-            /*if (pictureBoxBall.Left == 0 || pictureBoxBall.Right == 0)
-            {
-                horizontalBallMovement = -horizontalBallMovement;
-                return;
-            }*/
             for (int y = 0; y < Ytile; y++)
             {
                 for (int x = 0; x < Xtile; x++)
                 {
                     if (pictureBoxBall.Bounds.IntersectsWith(cp[y, x].Bounds) && cp[y, x].Visible == true)
                     {
-                        //horizontalBallMovement = -horizontalBallMovement;
+                        //Invert movement when there is Collision
                         verticalBallMovement = -verticalBallMovement;
                         if (cp[y, x].Golpes > 0)
                         {
@@ -197,23 +200,17 @@ namespace proyectoPOO
                                         GameData.points += 1;
                                         break;
                                 }
-                                //GameData.points += 1;
-
                                 cp[y, x].Visible = false;
                                 Controls.Remove(cp[y, x]);
-                                
                                 //when you win 
                                 if (GameData.points == 150)
                                 {
-                                    //timerForMovements.Stop();
+                                    timerForMovements.Stop();
                                     MessageBox.Show("Felicidades has ganado!");
                                     endGame();
                                 }
                             }
-                            
-                            
-
-                            points.Text = GameData.points.ToString();
+                            points.Text = GameData.points.ToString();//Update points in WindowsForm
                             return;
                         }
 
@@ -222,7 +219,7 @@ namespace proyectoPOO
                 }
             }
         }
-        
+        //For to change image to the last blocks line
         private void Changepicture(picturebox.picturebox block)
         {
             
@@ -255,7 +252,7 @@ namespace proyectoPOO
             {
                 return;
             }
-            //movimiento de la pelota
+            //movement of the ball
             Movement();
             //detect collision with block
             Blocks();

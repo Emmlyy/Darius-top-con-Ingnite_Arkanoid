@@ -93,8 +93,6 @@ namespace proyectoPOO
         private System.Windows.Forms.PictureBox Player;
         private System.Windows.Forms.Timer timerForMovements;
 
-        private System.Windows.Forms.Timer timer1;
-
         #endregion
     }
 }

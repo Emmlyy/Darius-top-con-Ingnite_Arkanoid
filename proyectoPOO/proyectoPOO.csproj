@@ -107,10 +107,12 @@
   <ItemGroup>
     <Compile Include="Controllers\Connection.cs" />
     <Compile Include="Controllers\ControllersGame.cs" />
-    <Compile Include="Controllers\UserException.cs" />
+    <Compile Include="Exceptions\NameLength.cs" />
+    <Compile Include="Exceptions\TopTenException.cs" />
+    <Compile Include="Exceptions\UserException.cs" />
     <Compile Include="Models\GameData.cs" />
+    <Compile Include="Models\picturebox.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="picturebox\picturebox.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\frmMain.cs">

@@ -37,6 +37,7 @@ namespace proyectoPOO
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.BtnPlay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelInfo = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@ namespace proyectoPOO
             this.tableLayoutPanel1.Controls.Add(this.txtUsuario, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.BtnPlay, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelInfo, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -104,6 +106,20 @@ namespace proyectoPOO
             this.label1.Text = "ESCRIBA SU NICKNAME";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelInfo
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.labelInfo, 2);
+            this.labelInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.labelInfo.ForeColor = System.Drawing.Color.White;
+            this.labelInfo.Location = new System.Drawing.Point(3, 354);
+            this.labelInfo.Name = "labelInfo";
+            this.labelInfo.Size = new System.Drawing.Size(558, 119);
+            this.labelInfo.TabIndex = 3;
+            this.labelInfo.Text = "            Presione ESC para regresar";
+            this.labelInfo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
             // Play
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -114,6 +130,7 @@ namespace proyectoPOO
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "Play";
             this.Size = new System.Drawing.Size(705, 473);
+            this.Load += new System.EventHandler(this.Play_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -126,5 +143,6 @@ namespace proyectoPOO
         #endregion
 
         private System.Windows.Forms.Button BtnPlay;
+        private System.Windows.Forms.Label labelInfo;
     }
 }

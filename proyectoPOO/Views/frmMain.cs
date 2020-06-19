@@ -75,5 +75,14 @@ namespace proyectoPOO
         {
             Application.Exit();
         }
+
+        private void frmMain_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Escape)
+            {
+                Application.Restart();
+                
+            }
+        }
     }
 }
