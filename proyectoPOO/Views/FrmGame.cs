@@ -34,7 +34,7 @@ namespace proyectoPOO
             WindowState = FormWindowState.Maximized;
             
             //Used for the initial movement of the ball
-            horizontalBallMovement = 10;
+            horizontalBallMovement = 7;
             verticalBallMovement = -horizontalBallMovement;
         }
     private void Game__Load(object sender, EventArgs e)
@@ -85,6 +85,7 @@ namespace proyectoPOO
                     
                     cp[i,j].BackgroundImage = Image.FromFile("../../Sprites/" + ( i + 1 ) + ".png");
                     cp[i, j].BackgroundImageLayout = ImageLayout.Stretch;
+                    cp[i, j].Tag = (i+1).ToString();
                     //ADD rows and columns to the form
                     Controls.Add(cp[i, j]);
                 }
@@ -92,102 +93,124 @@ namespace proyectoPOO
                 
             }
         }
+
         private void Movement()
         {
             pictureBoxBall.Top += -verticalBallMovement;
             pictureBoxBall.Left += horizontalBallMovement;
-            
-            if (pictureBoxBall.Bottom > this.ClientSize.Height) 
+
+            if (pictureBoxBall.Bottom > this.ClientSize.Height)
             {
-               //Restart 
-               LoadPlayer();
-               GameData.statusGame = false;
-               GameData.lifes -= 1;
-               UptadeLife();
-               MessageBox.Show("-1 vida");
-             
-               if (GameData.lifes == 0)
-               {
-                   //actualizar datos en la BD
-                   ControllersGame.Update(user);
-                   
-                   Form temp = this.FindForm();
-                   temp.Controls.Clear();
-                   if (MessageBox.Show("¿Desea jugar otra partida?",
-                           "Consulta",
-                           MessageBoxButtons.YesNo,
-                           MessageBoxIcon.Question)==DialogResult.Yes)
-                   {
-                       GameData.InicializarJuego();
-                       //Application.Restart();
-                       LoadTiles();
-                       LoadPlayer();
-                       LoadPanel();
-                       temp.Close();
-                       FrmGame newGame = new FrmGame(user);
-                       newGame.Show();
-                   }
-                   else
-                   {
-                       Application.Restart();
-                   }
-                   //End Game
-               }
-           }
-           else if (pictureBoxBall.Top < 0)
-           {
-               verticalBallMovement = -verticalBallMovement;
-           }
-           else if (pictureBoxBall.Right > this.ClientSize.Width)
-           {
+                //Restart 
+                LoadPlayer();
+                GameData.statusGame = false;
+                GameData.lifes -= 1;
+                UptadeLife();
+                MessageBox.Show("-1 vida");
+                if (GameData.lifes == 0)
+                {
+                    endGame();
+                    //End Game
+                }
+            }
+            else if (pictureBoxBall.Top < 0)
+            {
+                verticalBallMovement = -verticalBallMovement; 
+            }
+            else if (pictureBoxBall.Right > this.ClientSize.Width)
+            {
                horizontalBallMovement = -horizontalBallMovement;
-           }
-           else if (pictureBoxBall.Left < 0)
-           {
+            }
+            else if (pictureBoxBall.Left < 0)
+            {
                horizontalBallMovement = -horizontalBallMovement;
-           }
+            }
 
-           if (pictureBoxBall.Bounds.IntersectsWith(Player.Bounds))
-           {
+            if (pictureBoxBall.Bounds.IntersectsWith(Player.Bounds)==true)
+            {
                verticalBallMovement = -verticalBallMovement;
-           } }
+            } }
 
+        private void endGame()
+        {
+            ControllersGame.Update(user);
+            Form temp = this.FindForm();
+            temp.Controls.Clear();
+            if (MessageBox.Show("¿Desea jugar otra partida?",
+                "Consulta",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                GameData.InicializarJuego();
+                //Application.Restart();
+                LoadTiles();
+                LoadPlayer();
+                LoadPanel();
+                temp.Close();
+                FrmGame newGame = new FrmGame(user);
+                newGame.Show();
+            }
+            else
+            {
+                Application.Restart();
+            }
+        }
         private void Blocks()
         {
-            if (pictureBoxBall.Left == 0 || pictureBoxBall.Right == 0)
+            /*if (pictureBoxBall.Left == 0 || pictureBoxBall.Right == 0)
             {
                 horizontalBallMovement = -horizontalBallMovement;
                 return;
-            }
-           
+            }*/
             for (int y = 0; y < Ytile; y++)
             {
-
                 for (int x = 0; x < Xtile; x++)
                 {
                     if (pictureBoxBall.Bounds.IntersectsWith(cp[y, x].Bounds) && cp[y, x].Visible == true)
                     {
+                        //horizontalBallMovement = -horizontalBallMovement;
+                        verticalBallMovement = -verticalBallMovement;
                         if (cp[y, x].Golpes > 0)
                         {
-                            horizontalBallMovement = -horizontalBallMovement;
-                            verticalBallMovement = -verticalBallMovement;
                             cp[y, x].Golpes--;
                             Changepicture(cp[y, x]);
                             if (cp[y, x].Golpes == 0)
                             {
-                                GameData.points += 1;
+                                switch (cp[y,x].Tag)
+                                {
+                                    case "5":
+                                        GameData.points += 1;
+                                        break;
+                                    case "4" :
+                                        GameData.points += 2;
+                                        break;
+                                    case "3":
+                                        GameData.points += 3;
+                                        break;
+                                    case "2":
+                                        GameData.points += 4;
+                                        break;
+                                    case "1":
+                                        GameData.points += 5;
+                                        break;
+                                    default:
+                                        GameData.points += 1;
+                                        break;
+                                }
+                                //GameData.points += 1;
 
                                 cp[y, x].Visible = false;
                                 Controls.Remove(cp[y, x]);
-                                verticalBallMovement = -verticalBallMovement;
-                                verticalBallMovement = -horizontalBallMovement;
+                                
                                 //when you win 
-                                if (GameData.points > 49)
+                                if (GameData.points == 150)
                                 {
-                                    timerForMovements.Stop();
-                                    MessageBox.Show("felicidades ha ganado");
+                                    //timerForMovements.Stop();
+                                    MessageBox.Show("Felicidades has ganado!");
+                                    endGame();
                                 }
                             }
+                            
                             
 
                             points.Text = GameData.points.ToString();
@@ -204,24 +227,24 @@ namespace proyectoPOO
         {
             
             block.BackgroundImage = Image.FromFile("../../Sprites/1.5.png");
-            
         }
 
 
         private void Game__MouseMove(object sender, MouseEventArgs e)
         {
+            Player.Left = e.X -( Player.Width/2);
             if (!GameData.statusGame)
             {
                 if (e.X < (Width - Player.Width))
                 {
-                    Player.Left = e.X;
+                    Player.Left = e.X -( Player.Width/2);
                     pictureBoxBall.Left = Player.Left + (Player.Width / 2) - (pictureBoxBall.Width / 2);
                     pictureBoxBall.Top = (Player.Top - pictureBoxBall.Height );
                 }
             }
             if (e.X < (Width - Player.Width))
             {
-                Player.Left = e.X;
+                Player.Left = e.X -( Player.Width/2);
                 
             }
         }

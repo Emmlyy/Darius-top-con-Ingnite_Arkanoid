@@ -11,6 +11,11 @@ namespace proyectoPOO.picturebox
             
         }
 
+        public void Check()
+        {
+            
+        }
+
         
     }
 }
