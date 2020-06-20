@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace proyectoPOO
+namespace proyectoPOO.Views
 {
     partial class Play
     {
@@ -91,7 +91,7 @@ namespace proyectoPOO
             this.BtnPlay.TabIndex = 2;
             this.BtnPlay.Text = "Play";
             this.BtnPlay.UseVisualStyleBackColor = false;
-            this.BtnPlay.Click += new System.EventHandler(this.BtnPlay_Click);
+            this.BtnPlay.Click += new System.EventHandler(this.BttnPlay_Click);
             // 
             // label1
             // 

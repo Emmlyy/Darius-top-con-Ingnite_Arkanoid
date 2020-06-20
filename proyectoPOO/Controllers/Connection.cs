@@ -1,13 +1,11 @@
-﻿using System;
-using System.Data;
-using System.Windows.Forms;
+﻿using System.Data;
 using Npgsql;
 
-namespace proyectoPOO
+namespace proyectoPOO.Controllers
 {
-    public class Connection
+    public static class Connection
     {
-        private static string herokuConnectionString = @"
+        private static string ConnectionString = @"
           Host=ec2-34-230-149-169.compute-1.amazonaws.com;
           Port=5432;
           Username=uyuljahpmkxlja;
@@ -20,7 +18,7 @@ namespace proyectoPOO
 
         public static DataTable Query(string query)
         {
-            NpgsqlConnection db = new NpgsqlConnection(herokuConnectionString);
+            NpgsqlConnection db = new NpgsqlConnection(ConnectionString);
             DataSet ds = new DataSet();
             db.Open();
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query,db);
@@ -29,11 +27,11 @@ namespace proyectoPOO
             return ds.Tables[0];
         }
 
-        public static void noQuery(string _noQuery)
+        public static void NoQuery(string stringnoQuery)
         {
-            NpgsqlConnection db = new NpgsqlConnection(herokuConnectionString);
+            NpgsqlConnection db = new NpgsqlConnection(ConnectionString);
             db.Open();
-            NpgsqlCommand noQuery = new NpgsqlCommand(_noQuery, db);
+            NpgsqlCommand noQuery = new NpgsqlCommand(stringnoQuery, db);
             noQuery.ExecuteNonQuery();
             db.Close();
         }

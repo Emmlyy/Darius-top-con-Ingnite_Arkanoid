@@ -1,28 +1,27 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
-using proyectoPOO.picturebox;
+using proyectoPOO.Controllers;
+using proyectoPOO.Models;
 
-namespace proyectoPOO
+namespace proyectoPOO.Views
 {
     public partial class FrmGame : Form
     {
         //Movements of ball
-        public int verticalBallMovement;
-        public int horizontalBallMovement;
+        public int verticalBallMovement, horizontalBallMovement;
         public User user = new User();//Model of Player
+        
         //number of rows and columns of blocks
-        public const int Xtile = 10;
-        public const int Ytile = 5;
+        public const int Xtile = 10, Ytile = 5;
         
         //Visual elements of the WindowsForm
-        private picturebox.picturebox[,] cp;
-        private Label points;
-        private Panel scores;
-        private PictureBox[] life;
-        /*  private picturebox.PictureBlock[,] Blocks;*/
-      public FrmGame(User u)
+        private Pic[,] cp;
+        private Label lblPoints;
+        private Panel pnlScores;
+        private PictureBox[] picLife;
+      
+        public FrmGame(User u)
         { 
             InitializeComponent();
             user = u;
@@ -36,7 +35,7 @@ namespace proyectoPOO
             horizontalBallMovement = 7;
             verticalBallMovement = -horizontalBallMovement;
         }
-    private void Game__Load(object sender, EventArgs e)
+        private void Game_Load(object sender, EventArgs e)
         {
             LoadTiles();
             LoadPlayer();
@@ -52,10 +51,10 @@ namespace proyectoPOO
             Player.Left = (Width / 2)-(Player.Width/2);
             
             //Ball
-            pictureBoxBall.BackgroundImage = Image.FromFile("../../Sprites/Ball.png");
+            Ball.BackgroundImage = Image.FromFile("../../Sprites/Ball.png");
             Player.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBoxBall.Top = (Player.Top - pictureBoxBall.Height );
-            pictureBoxBall.Left = (Width / 2);
+            Ball.Top = (Player.Top - Ball.Height );
+            Ball.Left = (Width / 2);
             
         }
         //Set Blocks
@@ -64,17 +63,17 @@ namespace proyectoPOO
            
             int PHeigt = (int) (Height  * 0.3) / Ytile;
             int pwidth = Width / Xtile;
-            cp =  new picturebox.picturebox[Ytile,Xtile];
+            cp =  new Pic[Ytile,Xtile];
             
             for (int i=0; i < Ytile; i++)
             {
                 for (int j = 0; j < Xtile; j++)
                 {
-                    cp[i,j] = new picturebox.picturebox();
+                    cp[i,j] = new Pic();
                     if (i == 0)
-                        cp[i, j].Golpes = 2;
+                        cp[i, j].Hits = 2;
                     else
-                        cp[i, j].Golpes = 1;
+                        cp[i, j].Hits = 1;
 
                     cp[i, j].Height = PHeigt;
                     cp[i, j].Width = pwidth;
@@ -97,10 +96,10 @@ namespace proyectoPOO
         private void Movement()
         {
             //Position
-            pictureBoxBall.Top += -verticalBallMovement;
-            pictureBoxBall.Left += horizontalBallMovement;
+            Ball.Top += -verticalBallMovement;
+            Ball.Left += horizontalBallMovement;
             //When the ball touches the window's bottom edge a life is lost    
-            if (pictureBoxBall.Bottom > this.ClientSize.Height)
+            if (Ball.Bottom > this.ClientSize.Height)
             {
                 //Restart 
                 LoadPlayer();
@@ -111,32 +110,32 @@ namespace proyectoPOO
                 if (GameData.lifes == 0)
                 {
                     timerForMovements.Stop();
-                    endGame();
+                    EndGame();
                     //End Game
                 }
             }
             //Negative VerticalMovement
-            else if (pictureBoxBall.Top < 0)
+            else if (Ball.Top < 0)
             {
                 verticalBallMovement = -verticalBallMovement; 
             }
             //Negative HorizontalMovement
-            else if (pictureBoxBall.Right > this.ClientSize.Width)
+            else if (Ball.Right > this.ClientSize.Width)
             {
                horizontalBallMovement = -horizontalBallMovement;
             }
             //for the lateral edges
-            else if (pictureBoxBall.Left < 0)
+            else if (Ball.Left < 0)
             {
                horizontalBallMovement = -horizontalBallMovement;
             }
             //For the ball when it touch the platform
-            if (pictureBoxBall.Bounds.IntersectsWith(Player.Bounds)==true)
+            if (Ball.Bounds.IntersectsWith(Player.Bounds)==true)
             {
                verticalBallMovement = -verticalBallMovement;
             } }
         //When the game is over to win or lose
-        private void endGame()
+        private void EndGame()
         {
             ControllersGame.Update(user);//Update points
             Form temp = this.FindForm();
@@ -147,7 +146,7 @@ namespace proyectoPOO
                 MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 //Reload Data al newForm
-                GameData.InicializarJuego();
+                GameData.InitializeGame();
                 //Application.Restart();
                 LoadTiles();
                 LoadPlayer();
@@ -158,7 +157,7 @@ namespace proyectoPOO
             }
             else
             {
-                //Rstart App!
+                //Restart App!
                 Application.Restart();
             }
         }
@@ -169,15 +168,15 @@ namespace proyectoPOO
             {
                 for (int x = 0; x < Xtile; x++)
                 {
-                    if (pictureBoxBall.Bounds.IntersectsWith(cp[y, x].Bounds) && cp[y, x].Visible == true)
+                    if (Ball.Bounds.IntersectsWith(cp[y, x].Bounds) && cp[y, x].Visible == true)
                     {
                         //Invert movement when there is Collision
                         verticalBallMovement = -verticalBallMovement;
-                        if (cp[y, x].Golpes > 0)
+                        if (cp[y, x].Hits > 0)
                         {
-                            cp[y, x].Golpes--;
+                            cp[y, x].Hits--;
                             Changepicture(cp[y, x]);
-                            if (cp[y, x].Golpes == 0)
+                            if (cp[y, x].Hits == 0)
                             {
                                 switch (cp[y,x].Tag)
                                 {
@@ -206,11 +205,11 @@ namespace proyectoPOO
                                 if (GameData.points == 150)
                                 {
                                     timerForMovements.Stop();
-                                    MessageBox.Show("Felicidades has ganado!");
-                                    endGame();
+                                    MessageBox.Show("Felicidades, has ganado!");
+                                    EndGame();
                                 }
                             }
-                            points.Text = GameData.points.ToString();//Update points in WindowsForm
+                            lblPoints.Text = GameData.points.ToString();//Update points in WindowsForm
                             return;
                         }
 
@@ -220,14 +219,11 @@ namespace proyectoPOO
             }
         }
         //For to change image to the last blocks line
-        private void Changepicture(picturebox.picturebox block)
+        private void Changepicture(Pic block)
         {
-            
             block.BackgroundImage = Image.FromFile("../../Sprites/1.5.png");
         }
-
-
-        private void Game__MouseMove(object sender, MouseEventArgs e)
+        private void Game_MouseMove(object sender, MouseEventArgs e)
         {
             Player.Left = e.X -( Player.Width/2);
             if (!GameData.statusGame)
@@ -235,8 +231,8 @@ namespace proyectoPOO
                 if (e.X < (Width - Player.Width))
                 {
                     Player.Left = e.X -( Player.Width/2);
-                    pictureBoxBall.Left = Player.Left + (Player.Width / 2) - (pictureBoxBall.Width / 2);
-                    pictureBoxBall.Top = (Player.Top - pictureBoxBall.Height );
+                    Ball.Left = Player.Left + (Player.Width / 2) - (Ball.Width / 2);
+                    Ball.Top = (Player.Top - Ball.Height );
                 }
             }
             if (e.X < (Width - Player.Width))
@@ -245,7 +241,6 @@ namespace proyectoPOO
                 
             }
         }
-
         private void TimerForMovements_Tick(object sender, EventArgs e)
         {
             if (!GameData.statusGame)
@@ -258,8 +253,7 @@ namespace proyectoPOO
             Blocks();
 
         }
-
-        private void Game__KeyDown(object sender, KeyEventArgs e)
+        private void Game_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode==Keys.Space)
             {
@@ -267,66 +261,64 @@ namespace proyectoPOO
             }
             
         }
-
         private void LoadPanel()
         {
            
-            // Instanciar panel
-            scores = new Panel();
+            // instantiate panel
+            pnlScores = new Panel();
 
-            // Setear elementos del panel
-            scores.Width = Width;
-            scores.Height = (int)(Height * 0.07);
-            scores.Top = scores.Left = 0;
-            scores.BackColor = Color.Black;
+            // Set panel elements
+            pnlScores.Width = Width;
+            pnlScores.Height = (int)(Height * 0.07);
+            pnlScores.Top = pnlScores.Left = 0;
+            pnlScores.BackColor = Color.Black;
             
-            life = new PictureBox[GameData.lifes];
+            picLife = new PictureBox[GameData.lifes];
 
             for(int i = 0; i < GameData.lifes; i++)
             {
-                // Instanciacion de pb
-                life[i] = new PictureBox();
+                // Instantiate pictureBox
+                picLife[i] = new PictureBox();
 
-                life[i].Height = life[i].Width = scores.Height;
+                picLife[i].Height = picLife[i].Width = pnlScores.Height;
 
-                life[i].BackgroundImage = Image.FromFile("../../Sprites/Heart.png");
-                life[i].BackgroundImageLayout = ImageLayout.Stretch;
+                picLife[i].BackgroundImage = Image.FromFile("../../Sprites/Heart.png");
+                picLife[i].BackgroundImageLayout = ImageLayout.Stretch;
 
-                life[i].Top = 0;
+                picLife[i].Top = 0;
 
                 if (i == 0)
-                     life[i].Left = 20;
+                     picLife[i].Left = 20;
                 else
                 {
-                    life[i].Left = life[i - 1].Right + 5;
+                    picLife[i].Left = picLife[i - 1].Right + 5;
                 }
             }
             
 
             // instance labels
-            points = new Label();
+            lblPoints = new Label();
 
             // Set elements of the labels
-            points.ForeColor = Color.White;
-            points.Text = GameData.points.ToString();
-            points.Left = Width - 100;
-            points.Height = scores.Height;
-            points.Font= new Font("Times New Roman",28F);
+            lblPoints.ForeColor = Color.White;
+            lblPoints.Text = GameData.points.ToString();
+            lblPoints.Left = Width - 100;
+            lblPoints.Height = pnlScores.Height;
+            lblPoints.Font= new Font("Times New Roman",28F);
             
-            scores.Controls.Add(points);
+            pnlScores.Controls.Add(lblPoints);
 
-            foreach(var pb in life)
+            foreach(var pb in picLife)
             {
-                scores.Controls.Add(pb);
+                pnlScores.Controls.Add(pb);
             }
 
-            Controls.Add(scores); 
+            Controls.Add(pnlScores); 
         }
-        
         private void UptadeLife()
         {
-            scores.Controls.Remove(life[GameData.lifes]);
-            life[GameData.lifes] = null;
+            pnlScores.Controls.Remove(picLife[GameData.lifes]);
+            picLife[GameData.lifes] = null;
         }
     }
     }

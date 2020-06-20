@@ -1,43 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using LiveCharts;
-using LiveCharts.WinForms;
 using LiveCharts.Wpf;
+using proyectoPOO.Controllers;
+using proyectoPOO.Exceptions;
+using proyectoPOO.Models;
 using CartesianChart = LiveCharts.WinForms.CartesianChart;
-using PieChart = LiveCharts.WinForms.PieChart;
 
-namespace proyectoPOO
+namespace proyectoPOO.Views
 {
     public partial class Score : UserControl
     {
         private CartesianChart chart;
-        private Label textLabel = new Label();
+        private Label txtLabel = new Label();
         public Score()
         {
             InitializeComponent();
             chart =new CartesianChart();
             this.Controls.Add(chart);
-           
-
         }
-
-
-        private void Puntaje_Load(object sender, EventArgs e)
+        private void Score_Load(object sender, EventArgs e)
         {
             try
             {
                 
-                textLabel.Width = 100;
-                textLabel.Height = 100;
-                textLabel.Top = 30;
-                textLabel.Left = 30;
-                textLabel.Text = "Presione ESC para regresar";
-                textLabel.Anchor = AnchorStyles.Left;
-                this.Controls.Add(textLabel);
-                //Especificaciones de la grafica
+                txtLabel.Width = 100;
+                txtLabel.Height = 100;
+                txtLabel.Top = 30;
+                txtLabel.Left = 30;
+                txtLabel.Text = "Presione ESC para regresar";
+                txtLabel.Anchor = AnchorStyles.Left;
+                this.Controls.Add(txtLabel);
+                
+                //graph specifications
                 Height = ClientSize.Height;
                 Width = ClientSize.Width;
                 chart.Top = 10;
@@ -45,18 +42,17 @@ namespace proyectoPOO
                 chart.Width = Convert.ToInt32(Width * 0.95);
                 chart.Height = Convert.ToInt32(Height * 0.95);
                 chart.Anchor = AnchorStyles.None;
-                //chart.Dock = DockStyle.Fill;
                 chart.BackColor = Color.Transparent;
 
-                //obtener lista del top
+                //get top list
                 List<User> u = new List<User>();
                 u = ControllersGame.Top();
                 if (u.Count == 0)
                 {
-                    throw new TopTenException("Not elements in DataBase!");
+                    throw new TopTenException("La base de datos no tiene elementos");
                 }
 
-                //creando grafica con campos vacios
+                //creating empty graph
                 chart.Series = new SeriesCollection
                 {
                     new RowSeries {Title = "Top 10", Values = new ChartValues<int>(), DataLabels = true}
@@ -66,7 +62,7 @@ namespace proyectoPOO
                 u.Reverse();
                 chart.LegendLocation = LegendLocation.Bottom;
 
-                //llenando campos de la grafico
+                //filling fields of the graph
                 foreach (var x in u)
                 {
                     chart.Series[0].Values.Add(x.point);
@@ -74,16 +70,15 @@ namespace proyectoPOO
                 }
                 MessageBox.Show("Top 10");
             }
-            catch (TopTenException)
+            catch (TopTenException ex)
             {
-                MessageBox.Show("No hay elementos en la base de datos!");
+                MessageBox.Show(ex.Message);
             }
             catch (Exception)
             {
                 MessageBox.Show("Error al cargar el top");
             }
         }
-
         
     }
 }

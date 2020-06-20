@@ -1,8 +1,10 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
+using proyectoPOO.Controllers;
+using proyectoPOO.Exceptions;
+using proyectoPOO.Models;
 
-namespace proyectoPOO
+namespace proyectoPOO.Views
 { 
     public partial class Play : UserControl
     {    
@@ -11,20 +13,16 @@ namespace proyectoPOO
             InitializeComponent();
             
         }
-
-
-        private void BtnPlay_Click(object sender, EventArgs e)
+        private void BttnPlay_Click(object sender, EventArgs e)
         {
-            
             if (txtUsuario.Text.Equals(""))
             {
-                MessageBox.Show("Debe ingresar un usuario para poder jugar!");
+                MessageBox.Show("¡Debe registrarse para poder jugar!");
             }
             else
             {
                 try
                 {
-
                     //Query to DB
                     User u = new User();
                     if (txtUsuario.Text.Length >= 20)
@@ -34,7 +32,7 @@ namespace proyectoPOO
 
                     u = ControllersGame.Exist(txtUsuario.Text);
 
-                    MessageBox.Show("Bienvenido: " + u.name + "\nTus puntos actuales son: " + u.point);
+                    MessageBox.Show("Bienvenido: " + u.name + "\n Tus puntos actuales son: " + u.point);
                     Form temp = this.FindForm();
                     temp.Hide();
 
@@ -45,14 +43,14 @@ namespace proyectoPOO
                 //Custom Exception for Create User
                 catch (UserException ex)
                 {
-                    MessageBox.Show(ex.Message + "creando...");
-                    //ControllersGame.Add(txtUsuario.Text);
-                    //MessageBox.Show("Registrado\n" + "Nickname: " + txtUsuario.Text + "\nPuntos: 0");
+                    MessageBox.Show(ex.Message + "Creando...");
+                    ControllersGame.Add(txtUsuario.Text);
+                    MessageBox.Show("Registrado\n" + "Nickname: " + txtUsuario.Text + "\nPuntos: 0");
                 }
                 //Custom Exception for Very long name
                 catch (NameLength)
                 {
-                    MessageBox.Show("Nombre demaciado largo");
+                    MessageBox.Show("Nombre demasiado largo");
                 }
                 catch (Exception exp)
                 {
@@ -60,8 +58,7 @@ namespace proyectoPOO
                 }
             }
         }
-
-
+        
         private void Play_Load(object sender, EventArgs e)
         {
             MessageBox.Show("Para jugar necesitas Entrar o registrar tu nickname, ¡Disfruta!");

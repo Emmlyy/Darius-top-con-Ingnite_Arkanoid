@@ -9,18 +9,20 @@
       <e p="Controllers" t="Include">
         <e p="Connection.cs" t="Include" />
         <e p="ControllersGame.cs" t="Include" />
+      </e>
+      <e p="Exceptions" t="Include">
+        <e p="NameLength.cs" t="Include" />
+        <e p="TopTenException.cs" t="Include" />
         <e p="UserException.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
         <e p="GameData.cs" t="Include" />
+        <e p="Pic.cs" t="Include" />
         <e p="User.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="packages.config" t="Include" />
-      <e p="picturebox" t="Include">
-        <e p="picturebox.cs" t="Include" />
-      </e>
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
         <e p="AssemblyInfo.cs" t="Include" />

@@ -1,4 +1,4 @@
-﻿namespace proyectoPOO
+﻿namespace proyectoPOO.Models
 {
     public class User
     {
@@ -8,7 +8,6 @@
         public User()
         {
         }
-
         public User(string name, int point)
         {
             this.name = name;

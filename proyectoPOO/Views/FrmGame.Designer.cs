@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace proyectoPOO
+namespace proyectoPOO.Views
 {
     partial class FrmGame
     {
@@ -32,27 +32,30 @@ namespace proyectoPOO
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGame));
-            this.pictureBoxBall = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources =
+                new System.ComponentModel.ComponentResourceManager(typeof(FrmGame));
+            this.Ball = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
             this.timerForMovements = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBoxBall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.Ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.Player)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBoxBall
+            // Ball
             // 
-            this.pictureBoxBall.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxBall.BackgroundImage")));
-            this.pictureBoxBall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxBall.Location = new System.Drawing.Point(509, 289);
-            this.pictureBoxBall.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.pictureBoxBall.Name = "pictureBoxBall";
-            this.pictureBoxBall.Size = new System.Drawing.Size(32, 30);
-            this.pictureBoxBall.TabIndex = 0;
-            this.pictureBoxBall.TabStop = false;
+            this.Ball.BackColor = System.Drawing.Color.Transparent;
+            this.Ball.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("Ball.BackgroundImage")));
+            this.Ball.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ball.Location = new System.Drawing.Point(509, 289);
+            this.Ball.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Ball.Name = "Ball";
+            this.Ball.Size = new System.Drawing.Size(32, 30);
+            this.Ball.TabIndex = 0;
+            this.Ball.TabStop = false;
             // 
             // Player
             // 
+            this.Player.BackColor = System.Drawing.Color.Transparent;
             this.Player.Location = new System.Drawing.Point(75, 393);
             this.Player.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Player.Name = "Player";
@@ -74,25 +77,27 @@ namespace proyectoPOO
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(708, 465);
             this.Controls.Add(this.Player);
-            this.Controls.Add(this.pictureBoxBall);
+            this.Controls.Add(this.Ball);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FrmGame";
-            this.Text = "Game_";
-            this.Load += new System.EventHandler(this.Game__Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game__KeyDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Game__MouseMove);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBoxBall)).EndInit();
+            this.Text = "Game";
+            this.Load += new System.EventHandler(this.Game_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Game_MouseMove);
+            ((System.ComponentModel.ISupportInitialize) (this.Ball)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.Player)).EndInit();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.PictureBox pictureBoxBall;
         private System.Windows.Forms.PictureBox Player;
         private System.Windows.Forms.Timer timerForMovements;
 
         #endregion
+
+        private System.Windows.Forms.PictureBox Ball;
     }
 }

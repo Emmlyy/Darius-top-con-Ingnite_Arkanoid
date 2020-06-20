@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using proyectoPOO.Exceptions;
+using proyectoPOO.Models;
 
-namespace proyectoPOO
+namespace proyectoPOO.Controllers
 {
     public static class ControllersGame
     {
@@ -29,7 +31,7 @@ namespace proyectoPOO
 
             if (user == null)
             {
-                throw new UserException("no existe el usuario");
+                throw new UserException("No existe el usuario");
             }
             User u=new User();
             u.name= user.Rows[0][0].ToString();
@@ -42,14 +44,14 @@ namespace proyectoPOO
         public static void Add(string nameU)
         {
             string noSql = "INSERT INTO public.\"User\"(\"UserID\", \"Points\")VALUES ('"+nameU+"', 0);";
-            Connection.noQuery(noSql);
+            Connection.NoQuery(noSql);
             
         }
 
         public static void Update(User u)
         {
             string noSql = $"UPDATE \"User\" SET \"Points\"= \"Points\" + {GameData.points} WHERE \"UserID\" = '{u.name}';";
-            Connection.noQuery(noSql);
+            Connection.NoQuery(noSql);
         }
     }
 }

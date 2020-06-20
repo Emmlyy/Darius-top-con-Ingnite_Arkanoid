@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace proyectoPOO
+namespace proyectoPOO.Exceptions
 {
     public class NameLength : Exception
     {

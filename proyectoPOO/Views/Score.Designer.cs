@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace proyectoPOO
+namespace proyectoPOO.Views
 {
     partial class Score
     {
@@ -95,7 +95,7 @@ namespace proyectoPOO
             this.Controls.Add(this.Contenedor);
             this.Name = "Score";
             this.Size = new System.Drawing.Size(537, 415);
-            this.Load += new System.EventHandler(this.Puntaje_Load);
+            this.Load += new System.EventHandler(this.Score_Load);
             this.Contenedor.ResumeLayout(false);
             this.ResumeLayout(false);
         }
