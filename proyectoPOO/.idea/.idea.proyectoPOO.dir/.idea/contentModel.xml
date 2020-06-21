@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\CORE i5\.Rider2019.3\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\CORE i5\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\CORE i5\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\CORE i5\Desktop\Nueva carpeta\Darius-top-con-Ingnite_Arkanoid\proyectoPOO" t="IncludeRecursive">
+      <e p="App.config" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="Controllers" t="Include">
+        <e p="Connection.cs" t="Include" />
+        <e p="ControllersGame.cs" t="Include" />
+      </e>
+      <e p="Exceptions" t="Include">
+        <e p="NameLength.cs" t="Include" />
+        <e p="TopTenException.cs" t="Include" />
+        <e p="UserException.cs" t="Include" />
+      </e>
+      <e p="Models" t="Include">
+        <e p="GameData.cs" t="Include" />
+        <e p="picturebox.cs" t="Include" />
+        <e p="User.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="packages.config" t="Include" />
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+        <e p="Resources.Designer.cs" t="Include" />
+        <e p="Resources.resx" t="Include" />
+        <e p="Settings.Designer.cs" t="Include" />
+        <e p="Settings.settings" t="Include" />
+      </e>
+      <e p="proyectoPOO.csproj" t="IncludeRecursive" />
+      <e p="Views" t="Include">
+        <e p="FrmGame.cs" t="Include" />
+        <e p="FrmGame.Designer.cs" t="Include" />
+        <e p="FrmGame.resx" t="Include" />
+        <e p="frmMain.cs" t="Include" />
+        <e p="frmMain.Designer.cs" t="Include" />
+        <e p="frmMain.resx" t="Include" />
+        <e p="Play.cs" t="Include" />
+        <e p="Play.Designer.cs" t="Include" />
+        <e p="Play.resx" t="Include" />
+        <e p="Score.cs" t="Include" />
+        <e p="Score.Designer.cs" t="Include" />
+        <e p="Score.resx" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>

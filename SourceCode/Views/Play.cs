@@ -32,7 +32,7 @@ namespace proyectoPOO.Views
 
                     u = ControllersGame.Exist(txtUsuario.Text);
 
-                    MessageBox.Show("Bienvenido: " + u.name + "\n Tus puntos actuales son: " + u.point);
+                    MessageBox.Show("Bienvenido: " + u.name + ".\n Tus puntos actuales son: " + u.point);
                     Form temp = this.FindForm();
                     temp.Hide();
 
@@ -61,7 +61,8 @@ namespace proyectoPOO.Views
         
         private void Play_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Para jugar necesitas Entrar o registrar tu nickname, ¡Disfruta!");
+            MessageBox.Show("Los bloques dan diferente puntaje dependiendo de su color, presionas espacio para iniciar el juego\n" +
+                                  "\nPara jugar necesitas Entrar o registrar tu nickname, ¡Disfruta!");
         }
     }
 }

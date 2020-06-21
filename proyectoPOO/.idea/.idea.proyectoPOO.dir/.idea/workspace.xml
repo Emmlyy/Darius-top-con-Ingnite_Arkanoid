@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4cdebfaf-1c11-4c5e-8417-efdce7905d27" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Exceptions/NameLength.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exceptions/TopTenException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UserException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Exceptions/UserException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/FrmGame.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Views/FrmGame.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/FrmGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Views/FrmGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Play.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Play.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Play.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Play.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Score.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Score.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Score.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/frmMain.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Views/frmMain.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/frmMain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Views/frmMain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/proyectoPOO.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/proyectoPOO.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/proyectoPOO.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/proyectoPOO.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/proyectoPOO.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/proyectoPOO.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/proyectoPOO.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/proyectoPOO.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picturebox/picturebox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/picturebox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoPOO.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoPOO.csproj" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/App.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Darius-top-con-Ingnite_Arkanoid-bcac6d9ac7e9c564b74a19751f1482b0a704192f/Darius-top-con-Ingnite_Arkanoid-bcac6d9ac7e9c564b74a19751f1482b0a704192f/proyectoPOO/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Properties/Settings.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/Play.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/Play.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/GameData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/FrmGame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/frmMain.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/FrmGame.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/picturebox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Exceptions/NameLength.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/Score.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Exceptions/TopTenException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/Connection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Views/Score.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Exceptions/UserException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/ControllersGame.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Controllers/Connection.cs" />
+        <option value="$PROJECT_DIR$/Views/Game.Designer.cs" />
+        <option value="$PROJECT_DIR$/Views/Jugar.cs" />
+        <option value="$PROJECT_DIR$/Views/Game.cs" />
+        <option value="$PROJECT_DIR$/Models/User.cs" />
+        <option value="$PROJECT_DIR$/Views/Form1.cs" />
+        <option value="$PROJECT_DIR$/Views/Puntaje.cs" />
+        <option value="$PROJECT_DIR$/Controllers/GameData.cs" />
+        <option value="$PROJECT_DIR$/Controllers/ControllersGame.cs" />
+        <option value="$PROJECT_DIR$/picturebox/picturebox.cs" />
+        <option value="$PROJECT_DIR$/Models/BlockColor.cs" />
+        <option value="$PROJECT_DIR$/App.config" />
+        <option value="$PROJECT_DIR$/Exceptions/TopTenException.cs" />
+        <option value="$PROJECT_DIR$/Exceptions/NameLength.cs" />
+        <option value="$PROJECT_DIR$/Views/Score.Designer.cs" />
+        <option value="$PROJECT_DIR$/Views/frmMain.cs" />
+        <option value="$PROJECT_DIR$/Views/FrmGame.cs" />
+        <option value="$PROJECT_DIR$/Views/Score.cs" />
+        <option value="$PROJECT_DIR$/Views/Play.cs" />
+        <option value="$PROJECT_DIR$/Views/Play.Designer.cs" />
+        <option value="$PROJECT_DIR$/Views/FrmGame.Designer.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1cguVx5CWm9HCX3vHoWoNgs38BY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.3" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="proyectoPOO" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/proyectoPOO.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4cdebfaf-1c11-4c5e-8417-efdce7905d27" name="Default Changelist" comment="" />
+      <created>1590962598415</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590962598415</updated>
+      <workItem from="1590962622441" duration="3466000" />
+      <workItem from="1591134312835" duration="4201000" />
+      <workItem from="1591291746019" duration="298000" />
+      <workItem from="1591292064966" duration="6400000" />
+      <workItem from="1591315026551" duration="1060000" />
+      <workItem from="1592346446143" duration="1918000" />
+      <workItem from="1592349787306" duration="485000" />
+      <workItem from="1592372710232" duration="8367000" />
+      <workItem from="1592504108315" duration="25718000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1592539364363">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592539364363" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1592539364363">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592539364363" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1592539364363">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592539364363" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1592539364363">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592539364363" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1591300507710">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591300507710" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1591300507710">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1591300507710" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1591300507710">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1591300507710" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1591300507710">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1591300507710" />
+    <state width="1323" height="223" key="GridCell.Tab.2.bottom" timestamp="1591300507711">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591300507711" />
+    <state width="1323" height="223" key="GridCell.Tab.2.center" timestamp="1591300507710">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1591300507710" />
+    <state width="1323" height="223" key="GridCell.Tab.2.left" timestamp="1591300507710">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1591300507710" />
+    <state width="1323" height="223" key="GridCell.Tab.2.right" timestamp="1591300507711">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1591300507711" />
+    <state width="1323" height="223" key="GridCell.Tab.3.bottom" timestamp="1591300507711">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591300507711" />
+    <state width="1323" height="223" key="GridCell.Tab.3.center" timestamp="1591300507711">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1591300507711" />
+    <state width="1323" height="223" key="GridCell.Tab.3.left" timestamp="1591300507711">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1591300507711" />
+    <state width="1323" height="223" key="GridCell.Tab.3.right" timestamp="1591300507711">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1591300507711" />
+    <state width="1323" height="223" key="GridCell.Tab.4.bottom" timestamp="1591300507713">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.4.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591300507713" />
+    <state width="1323" height="223" key="GridCell.Tab.4.center" timestamp="1591300507713">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.4.center/0.0.1366.728@0.0.1366.728" timestamp="1591300507713" />
+    <state width="1323" height="223" key="GridCell.Tab.4.left" timestamp="1591300507713">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.4.left/0.0.1366.728@0.0.1366.728" timestamp="1591300507713" />
+    <state width="1323" height="223" key="GridCell.Tab.4.right" timestamp="1591300507713">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.4.right/0.0.1366.728@0.0.1366.728" timestamp="1591300507713" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1592529143650">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592529143650" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592516322422">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592516322422" />
+  </component>
+</project>

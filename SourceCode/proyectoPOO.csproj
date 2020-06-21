@@ -107,7 +107,9 @@
   <ItemGroup>
     <Compile Include="Controllers\Connection.cs" />
     <Compile Include="Controllers\ControllersGame.cs" />
+    <Compile Include="Exceptions\GameClosedInProcess.cs" />
     <Compile Include="Exceptions\NameLength.cs" />
+    <Compile Include="Exceptions\NoAccounts.cs" />
     <Compile Include="Exceptions\TopTenException.cs" />
     <Compile Include="Exceptions\UserException.cs" />
     <Compile Include="Models\GameData.cs" />

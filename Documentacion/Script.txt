@@ -1,0 +1,15 @@
+-- Table: public."User"
+
+-- DROP TABLE public."User";
+
+CREATE TABLE public."User"
+(
+    "UserID" character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    "Points" integer NOT NULL,
+    CONSTRAINT "User_pkey" PRIMARY KEY ("UserID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public."User"
+    OWNER to postgres

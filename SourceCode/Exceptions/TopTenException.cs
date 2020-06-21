@@ -4,9 +4,9 @@ namespace proyectoPOO.Exceptions
 {
     public class TopTenException : Exception
     {
-        public TopTenException(string Message) : base(Message)
+        public TopTenException(string message) : base()
         {
             
-        } 
+        }
     }
 }

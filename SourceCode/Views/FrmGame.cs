@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using proyectoPOO.Controllers;
+using proyectoPOO.Exceptions;
 using proyectoPOO.Models;
 
 namespace proyectoPOO.Views
@@ -109,7 +110,7 @@ namespace proyectoPOO.Views
                 MessageBox.Show("-1 vida");
                 if (GameData.lifes == 0)
                 {
-                    timerForMovements.Stop();
+                    dtptimerForMovements.Stop();
                     EndGame();
                     //End Game
                 }
@@ -204,7 +205,7 @@ namespace proyectoPOO.Views
                                 //when you win 
                                 if (GameData.points == 150)
                                 {
-                                    timerForMovements.Stop();
+                                    dtptimerForMovements.Stop();
                                     MessageBox.Show("Felicidades, has ganado!");
                                     EndGame();
                                 }
@@ -319,6 +320,44 @@ namespace proyectoPOO.Views
         {
             pnlScores.Controls.Remove(picLife[GameData.lifes]);
             picLife[GameData.lifes] = null;
+        }
+
+        private void FrmGame_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            try
+            {
+                if (GameData.lifes<=3 && GameData.lifes>=0 && GameData.points>0)
+                {
+                    throw new GameClosedInProcess("Have 1+ Points");
+                }
+            }
+            catch (GameClosedInProcess)
+            {
+                dtptimerForMovements.Stop();
+                if (MessageBox.Show($"¿Desea guardar sus puntos actuales? Actualemente tienes: {GameData.points} puntos",
+                    "Consulta",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question)==DialogResult.Yes)
+                {
+                    ControllersGame.Update(user);
+                    Application.Exit(); 
+                }
+            }
+        }
+
+        private void FrmGame_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                
+            } 
+            // Prompt user to save his data
+            if (e.CloseReason == CloseReason.WindowsShutDown)
+            {
+                
+            }
+            // Autosave and clear up ressources
         }
     }
     }

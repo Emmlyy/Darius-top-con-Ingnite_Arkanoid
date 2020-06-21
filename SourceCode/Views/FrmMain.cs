@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using System.Drawing;
 namespace proyectoPOO.Views
 {
     public partial class FrmMain : Form
@@ -50,6 +50,8 @@ namespace proyectoPOO.Views
             pnl.SetRowSpan(change,6);
             pnl.SetColumnSpan(change, 3);  
         }
+        
+        
         private void BttnClosed_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro(a) que desea salir del sistema?",

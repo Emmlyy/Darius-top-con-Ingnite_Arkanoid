@@ -36,7 +36,7 @@ namespace proyectoPOO.Views
                 new System.ComponentModel.ComponentResourceManager(typeof(FrmGame));
             this.Ball = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
-            this.timerForMovements = new System.Windows.Forms.Timer(this.components);
+            this.dtptimerForMovements = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize) (this.Ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.Player)).BeginInit();
             this.SuspendLayout();
@@ -63,11 +63,12 @@ namespace proyectoPOO.Views
             this.Player.TabIndex = 1;
             this.Player.TabStop = false;
             // 
-            // timerForMovements
+            // dtptimerForMovements
             // 
-            this.timerForMovements.Enabled = true;
-            this.timerForMovements.Interval = 10;
-            this.timerForMovements.Tick += new System.EventHandler(this.TimerForMovements_Tick);
+            this.dtptimerForMovements.Enabled = true;
+            this.dtptimerForMovements.Interval = 10;
+            this.dtptimerForMovements.Tag = "dtptimerForMovements";
+            this.dtptimerForMovements.Tick += new System.EventHandler(this.TimerForMovements_Tick);
             // 
             // FrmGame
             // 
@@ -85,6 +86,8 @@ namespace proyectoPOO.Views
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FrmGame";
             this.Text = "Game";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGame_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmGame_FormClosed);
             this.Load += new System.EventHandler(this.Game_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Game_MouseMove);
@@ -94,10 +97,10 @@ namespace proyectoPOO.Views
         }
 
         private System.Windows.Forms.PictureBox Player;
-        private System.Windows.Forms.Timer timerForMovements;
 
         #endregion
 
         private System.Windows.Forms.PictureBox Ball;
+        private System.Windows.Forms.Timer dtptimerForMovements;
     }
 }

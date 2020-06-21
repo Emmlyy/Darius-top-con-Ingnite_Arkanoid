@@ -15,6 +15,7 @@ namespace proyectoPOO.Views
     {
         private CartesianChart chart;
         private Label txtLabel = new Label();
+        private List<User> u = new List<User>();
         public Score()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace proyectoPOO.Views
         {
             try
             {
-                
+
                 txtLabel.Width = 100;
                 txtLabel.Height = 100;
                 txtLabel.Top = 30;
@@ -33,7 +34,7 @@ namespace proyectoPOO.Views
                 txtLabel.Text = "Presione ESC para regresar";
                 txtLabel.Anchor = AnchorStyles.Left;
                 this.Controls.Add(txtLabel);
-                
+
                 //graph specifications
                 Height = ClientSize.Height;
                 Width = ClientSize.Width;
@@ -45,20 +46,23 @@ namespace proyectoPOO.Views
                 chart.BackColor = Color.Transparent;
 
                 //get top list
-                List<User> u = new List<User>();
+                
                 u = ControllersGame.Top();
                 if (u.Count == 0)
                 {
-                    throw new TopTenException("La base de datos no tiene elementos");
+                    throw new NoAccounts("La base de datos no tiene elementos");
                 }
-
+                else if (u.Count > 0 && u.Count < 10)
+                {
+                    throw new TopTenException("Fail Load");
+                }
+                
                 //creating empty graph
                 chart.Series = new SeriesCollection
                 {
                     new RowSeries {Title = "Top 10", Values = new ChartValues<int>(), DataLabels = true}
                 };
                 chart.AxisY.Add(new Axis {Labels = new List<string>()});
-
                 u.Reverse();
                 chart.LegendLocation = LegendLocation.Bottom;
 
@@ -70,9 +74,28 @@ namespace proyectoPOO.Views
                 }
                 MessageBox.Show("Top 10");
             }
-            catch (TopTenException ex)
+            catch (NoAccounts ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            catch (TopTenException)
+            {
+                //creating empty graph
+                chart.Series = new SeriesCollection
+                {
+                    new RowSeries {Title = $"Top {u.Count}", Values = new ChartValues<int>(), DataLabels = true}
+                };
+                chart.AxisY.Add(new Axis {Labels = new List<string>()});
+                u.Reverse();
+                chart.LegendLocation = LegendLocation.Bottom;
+
+                //filling fields of the graph
+                foreach (var x in u)
+                {
+                    chart.Series[0].Values.Add(x.point);
+                    chart.AxisY[0].Labels.Add(x.name);
+                }
+                MessageBox.Show($"Top {u.Count}");
             }
             catch (Exception)
             {
