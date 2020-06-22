@@ -31,4 +31,5 @@ Cada vez que inicias sesión se muestra el puntaje.
 Si cierras el juego mientras hay una partida en proceso, el juego preguntará si quieres guardar tus puntos acumulados en esa partida o si deseas salir sin guardarlo.
 
 ##Trello
+
 https://trello.com/b/ubndevNj
