@@ -29,4 +29,5 @@ Cada vez que la bola toque el borde inferior fuera de la plataforma se perderá 
 Cada vez que inicias sección se muestra el puntaje.
 #### ¿Que pasa si cierro el juego a mitad de una partida?
 Si cierras el juego mientras hay una partida en proceso el juego preguntara si quieres guardar tus puntos acumulados en esa partida o si deseas salir sin guardarlo.
-
+##Trello
+https://trello.com/b/ubndevNj
