@@ -26,8 +26,8 @@ El puntaje ganado por destrucción de un bloque dependerá del color del bloque.
 #### ¿Cómo  funciona el sistema de vidas?
 Cada vez que la bola toque el borde inferior fuera de la plataforma se perderá 1 vida, se tiene un total de 3 vidas, al perder las 3 pierdes el juego.
 #### ¿Cómo puedo saber mi puntaje?
-Cada vez que inicias sección se muestra el puntaje.
-#### ¿Que pasa si cierro el juego a mitad de una partida?
-Si cierras el juego mientras hay una partida en proceso el juego preguntara si quieres guardar tus puntos acumulados en esa partida o si deseas salir sin guardarlo.
+Cada vez que inicias sesión se muestra el puntaje.
+#### ¿Qué pasa si cierro el juego a mitad de una partida?
+Si cierras el juego mientras hay una partida en proceso, el juego preguntará si quieres guardar tus puntos acumulados en esa partida o si deseas salir sin guardarlo.
 ##Trello
 https://trello.com/b/ubndevNj
