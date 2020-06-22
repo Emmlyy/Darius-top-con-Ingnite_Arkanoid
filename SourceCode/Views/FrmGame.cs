@@ -200,6 +200,7 @@ namespace proyectoPOO.Views
                                         GameData.points += 1;
                                         break;
                                 }
+                                lblPoints.Text = GameData.points.ToString();//Update points in WindowsForm
                                 cp[y, x].Visible = false;
                                 Controls.Remove(cp[y, x]);
                                 //when you win 
@@ -210,7 +211,7 @@ namespace proyectoPOO.Views
                                     EndGame();
                                 }
                             }
-                            lblPoints.Text = GameData.points.ToString();//Update points in WindowsForm
+                            
                             return;
                         }
 
@@ -346,18 +347,6 @@ namespace proyectoPOO.Views
             }
         }
 
-        private void FrmGame_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                
-            } 
-            // Prompt user to save his data
-            if (e.CloseReason == CloseReason.WindowsShutDown)
-            {
-                
-            }
-            // Autosave and clear up ressources
-        }
+       
     }
     }

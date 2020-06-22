@@ -87,7 +87,6 @@ namespace proyectoPOO.Views
             this.Name = "FrmGame";
             this.Text = "Game";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGame_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmGame_FormClosed);
             this.Load += new System.EventHandler(this.Game_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Game_MouseMove);
