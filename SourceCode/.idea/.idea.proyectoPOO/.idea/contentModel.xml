@@ -11,7 +11,9 @@
         <e p="ControllersGame.cs" t="Include" />
       </e>
       <e p="Exceptions" t="Include">
+        <e p="GameClosedInProcess.cs" t="Include" />
         <e p="NameLength.cs" t="Include" />
+        <e p="NoAccounts.cs" t="Include" />
         <e p="TopTenException.cs" t="Include" />
         <e p="UserException.cs" t="Include" />
       </e>

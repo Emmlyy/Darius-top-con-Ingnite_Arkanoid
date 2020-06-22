@@ -5,16 +5,8 @@ namespace proyectoPOO.Controllers
 {
     public static class Connection
     {
-        private static string ConnectionString = @"
-          Host=ec2-34-230-149-169.compute-1.amazonaws.com;
-          Port=5432;
-          Username=uyuljahpmkxlja;
-          Password=4921322ee3865f89021745ab38442443be0959390d1f2cbea47d753fbf38e54e;
-          Database=dr4v19hahf06q;
-          Pooling=true;
-          SSL Mode=Require;
-          TrustServerCertificate=True;
-        ";
+        private static string ConnectionString = 
+            "Server=127.0.0.1;Port=5432;User Id=postgres;Password=uca;Database=Arkanoid";
 
         public static DataTable Query(string query)
         {
