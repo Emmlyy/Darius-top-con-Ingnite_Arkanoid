@@ -29,7 +29,7 @@ namespace proyectoPOO.Controllers
             string sql = $"SELECT \"UserID\",\"Points\" FROM public.\"User\" WHERE \"UserID\"='" + nameU + "';";
             var user = Connection.Query(sql);
 
-            if (user == null)
+            if (user.Rows.Count == 0)
             {
                 throw new UserException("No existe el usuario");
             }

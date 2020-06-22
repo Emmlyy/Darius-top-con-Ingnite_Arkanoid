@@ -328,7 +328,7 @@ namespace proyectoPOO.Views
 
             try
             {
-                if (GameData.lifes<=3 && GameData.lifes>=0 && GameData.points>0)
+                if (GameData.lifes<=3 && GameData.lifes>=0 && GameData.points>0 && e.CloseReason == CloseReason.UserClosing)
                 {
                     throw new GameClosedInProcess("Have 1+ Points");
                 }

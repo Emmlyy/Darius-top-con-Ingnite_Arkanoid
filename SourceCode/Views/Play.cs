@@ -33,19 +33,17 @@ namespace proyectoPOO.Views
                     u = ControllersGame.Exist(txtUsuario.Text);
 
                     MessageBox.Show("Bienvenido: " + u.name + ".\n Tus puntos actuales son: " + u.point);
-                    Form temp = this.FindForm();
-                    temp.Hide();
-
-                    //temp.Dispose();
-                    FrmGame game = new FrmGame(u);
-                    game.ShowDialog();
+                    newGame(u);
                 }
                 //Custom Exception for Create User
                 catch (UserException ex)
                 {
-                    MessageBox.Show(ex.Message + "Creando...");
+                    MessageBox.Show(ex.Message + "  Creando...");
                     ControllersGame.Add(txtUsuario.Text);
                     MessageBox.Show("Registrado\n" + "Nickname: " + txtUsuario.Text + "\nPuntos: 0");
+                    User u = new User();
+                    u = ControllersGame.Exist(txtUsuario.Text);
+                    newGame(u);
                 }
                 //Custom Exception for Very long name
                 catch (NameLength)
@@ -57,6 +55,15 @@ namespace proyectoPOO.Views
                     MessageBox.Show(exp.Message);
                 }
             }
+        }
+
+        private void newGame(User u)
+        {
+            Form temp = this.FindForm();
+            temp.Hide();
+            //temp.Dispose();
+            FrmGame game = new FrmGame(u);
+            game.ShowDialog();
         }
         
         private void Play_Load(object sender, EventArgs e)
