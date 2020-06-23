@@ -6,7 +6,7 @@ namespace proyectoPOO.Controllers
     public static class Connection
     {
         private static string ConnectionString = 
-            "Server=127.0.0.1;Port=5432;User Id=postgres;Password=uca;Database=Arkanoid";
+            "Server=127.0.0.1;Port=5432;User Id=postgres;Password=mamamena17;Database=Arkanoid";
 
         public static DataTable Query(string query)
         {

@@ -172,9 +172,11 @@ namespace proyectoPOO.Views
                     if (Ball.Bounds.IntersectsWith(cp[y, x].Bounds) && cp[y, x].Visible == true)
                     {
                         //Invert movement when there is Collision
+                        
                         verticalBallMovement = -verticalBallMovement;
                         if (cp[y, x].Hits > 0)
                         {
+                            
                             cp[y, x].Hits--;
                             Changepicture(cp[y, x]);
                             if (cp[y, x].Hits == 0)
@@ -343,6 +345,10 @@ namespace proyectoPOO.Views
                 {
                     ControllersGame.Update(user);
                     Application.Exit(); 
+                }
+                else
+                {
+                    Application.Exit();
                 }
             }
         }
